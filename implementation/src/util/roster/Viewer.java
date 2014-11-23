@@ -16,13 +16,15 @@ public class Viewer  {
     // int class count
     // [] of classes
     // String firstName
-    // String secondName
+    // String lastName
     // String grade
     // boolean currentlyInClass
     // boolean able2Draw
 
-    private int ID;
-    private Collection<Classroom> classes;
+    private String firstName = "", lastName = "";
+    private boolean currentlyInClass = false, able2Draw = false;
+    private int classCount = 0, ID;
+    private Collection<Classroom> classroom;
 
 
     /**
@@ -32,21 +34,45 @@ public class Viewer  {
      * @return
      */
     public Collection<Classroom> getCurrentClasses() {
-        return classes;
+        return this.classroom;
     }
 
 
-    /**
-     * Return the viewer's id number
-     *
-     * @return the viewers id
-     */
-    public int getViewerID() {
-        return ID;
+    public void setAble2Draw(boolean able) {
+        able2Draw = able;
     }
 
-    public String viewersName() {
-        return "HELLO";
+    public void setCurrentlyInClass(boolean inClass) {
+        this.currentlyInClass = inClass;
+    }
+
+
+    //
+
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public boolean getAble2Draw() {
+        return this.able2Draw;
+    }
+
+
+    public boolean getCurrentlyInClass() {
+        return this.currentlyInClass;
+    }
+
+    public int getId() {
+        return this.ID;
+    }
+
+    public int getClassCount() {
+        return this.classCount;
     }
 
 
