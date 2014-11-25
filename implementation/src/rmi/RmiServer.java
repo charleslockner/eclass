@@ -21,7 +21,11 @@ import java.util.Observer;
 
 public class RmiServer extends Observable implements RmiService {
 
-
+    /**
+     *  For time constraints, id 1 will be the admin
+     *  and id 2 and 3 will be examples of the students
+     */
+    private static int viewerIds = 1;
 
     /**
      * Controlling the gui elements through the server

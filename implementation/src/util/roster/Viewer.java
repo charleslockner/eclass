@@ -12,14 +12,22 @@ import java.util.Collection;
 public class Viewer  {
 
 
-    // int id
-    // int class count
+    // int classCount
     // [] of classes
     // String firstName
     // String lastName
     // String grade
     // boolean currentlyInClass
     // boolean able2Draw
+
+    // { "classCount":2 ,
+    //   "classes":[ "English 310", "CSC 307"],
+    //   "firstName": "Keith",
+    //   "lastName":"Abdulla",
+    //   "grade": "Senior",
+    //   "currentlyInClass": "true",
+    //   "able2Draw" : "false"
+    // }
 
     private String firstName = "", lastName = "";
     private boolean currentlyInClass = false, able2Draw = false;
@@ -75,5 +83,15 @@ public class Viewer  {
         return this.classCount;
     }
 
+
+    /**
+     * This takes the json data from mongodb and unmarshalls it
+     * to a json to a viewer object.
+     *
+     * @param id the id of the viewer
+     */
+    public void unmarshallViewerDataFromServer(int id) {
+
+    }
 
 }
