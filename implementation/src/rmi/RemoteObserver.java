@@ -5,6 +5,7 @@ import util.roster.Viewer;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
+
 /**
  * Created by Keithmaynn on 11/20/14.
  */

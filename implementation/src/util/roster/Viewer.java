@@ -1,19 +1,17 @@
 package util.roster;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 
-import java.net.UnknownHostException;
 import java.util.Collection;
+
 
 /**
  * Class implementation of the viewer.
  * Each Viewer has an ID and a Name.
- *
  */
-public class Viewer  {
+public class Viewer {
 
     // the users that i made up when creating roster examples
     //
@@ -38,11 +36,12 @@ public class Viewer  {
     private Collection<Classroom> classroom;
 
 
+
+
     /**
-     *
      * Returns a collection of all the roster the viewer is in
      *
-     * @return
+     * @return  all the classrooms the user has for the quarter
      */
     public Collection<Classroom> getCurrentClasses() {
         return this.classroom;
@@ -56,7 +55,6 @@ public class Viewer  {
     public void setCurrentlyInClass(boolean inClass) {
         this.currentlyInClass = inClass;
     }
-
 
 
     public String getFirstName() {
@@ -84,7 +82,9 @@ public class Viewer  {
         return this.classCount;
     }
 
-    public String getRole() { return this.role; }
+    public String getRole() {
+        return this.role;
+    }
 
 
     /**
@@ -93,20 +93,21 @@ public class Viewer  {
      *
      * @param id the id of the viewer
      */
-    public Viewer unmarshallViewerDataFromServer(int id) {
-        try {
-            MongoClientURI mongoClientURI =
-                    new MongoClientURI("mongodb://kaabdull:eclass@ds055680.mongolab.com:55680/eclassroom");
-                    /* establish the connection as an actual client now */
-            MongoClient mongoClient = new MongoClient(mongoClientURI);
-                    /* find the database */
-            DB db = mongoClient.getDB("eclassroom");
-                    /* connect to the viewer database */
-            DBCollection collection = db.getCollection("viewers");
+     public Viewer unmarshallViewerDataFromServer(int id, DB database) {
 
-        } catch (UnknownHostException e) {
-            System.err.println();
-        }
+
+         // connect to the viewer database
+        DBCollection collection = database.getCollection("viewers");
+
+        // search by id
+        BasicDBObject whereQuerey = new BasicDBObject();
+        whereQuerey.put("ID", id);
+
+        // return the json format
+        //    the .find() returns a DBCursor
+        String json = collection.find(whereQuerey).next().toString();
+
+
 
 
         return this;

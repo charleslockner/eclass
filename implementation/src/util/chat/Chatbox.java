@@ -1,11 +1,12 @@
 package util.chat;
 
+
 import com.mongodb.*;
 
 import java.net.UnknownHostException;
 
 /**
- * Created by Keithmaynn on 11/22/14.
+ * @author kaabdull
  */
 public class Chatbox {
 
@@ -35,4 +36,5 @@ public class Chatbox {
         whereQuery.put("id", 1);
         return collection.find(whereQuery).next().toString();
     }
+
 }
