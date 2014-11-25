@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     compile ('org.mongodb:mongo-java-driver:2.12.4')
+    compile ('org.json:json:20090211')
 }
 
 task wrapper(type: Wrapper) {
