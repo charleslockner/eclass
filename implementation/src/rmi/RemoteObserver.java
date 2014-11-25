@@ -1,5 +1,7 @@
 package rmi;
 
+import util.roster.Viewer;
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -9,6 +11,6 @@ import java.rmi.RemoteException;
 public interface RemoteObserver extends Remote {
 
     void update(Object observable, Object updateMsg) throws RemoteException;
-    String getViewer() throws RemoteException;
+    Viewer getViewer(int id) throws RemoteException;
 
 }

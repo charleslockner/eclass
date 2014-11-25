@@ -1,20 +1,12 @@
 package rmi;
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import view.MainViewCreator;
-
 import javax.swing.*;
 import java.io.Serializable;
-import java.net.UnknownHostException;
-import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
@@ -22,8 +14,8 @@ import java.util.Observer;
 public class RmiServer extends Observable implements RmiService {
 
     /**
-     *  For time constraints, id 1 will be the admin
-     *  and id 2 and 3 will be examples of the students
+     *  For time constraints, id 0 will be the admin
+     *  and id 1 and 2 will be examples of the students
      */
     private static int viewerIds = 1;
 
@@ -55,7 +47,7 @@ public class RmiServer extends Observable implements RmiService {
         public void update(Observable o, Object arg) {
             try {
                 ro.update(o.toString(), arg);
-                System.out.println(ro.getViewer());
+
             } catch (RemoteException e) {
                 System.out
                         .println("Remote exception removing observer:" + this);
@@ -120,8 +112,6 @@ public class RmiServer extends Observable implements RmiService {
 
                 }
             });
-
-
 
             /**
              *

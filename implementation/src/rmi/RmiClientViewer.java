@@ -48,8 +48,10 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
     }
 
     @Override
-    public String getViewer() {
-        return "AHAH";
+    public Viewer getViewer(int id) {
+        viewer = new Viewer();
+        viewer.unmarshallViewerDataFromServer(id);
+        return viewer;
     }
 
 

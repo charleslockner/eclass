@@ -19,10 +19,9 @@ public class Viewer  {
     //
     //    doe, john    |    eve, linda     |     jim, frank     |     pam, jack
 
-
     // example of json data from mongodb
     // {
-    //   "ID"              : 1
+    //   "ID"              : 3
     //   "firstName"       : "Keith",
     //   "lastName"        : "Abdulla",
     //   "classCount"      : 2,
@@ -94,7 +93,7 @@ public class Viewer  {
      *
      * @param id the id of the viewer
      */
-    public void unmarshallViewerDataFromServer(int id) {
+    public Viewer unmarshallViewerDataFromServer(int id) {
         try {
             MongoClientURI mongoClientURI =
                     new MongoClientURI("mongodb://kaabdull:eclass@ds055680.mongolab.com:55680/eclassroom");
@@ -103,13 +102,14 @@ public class Viewer  {
                     /* find the database */
             DB db = mongoClient.getDB("eclassroom");
                     /* connect to the viewer database */
-            DBCollection collection = db.getCollection("viewers" +
-                    "");
+            DBCollection collection = db.getCollection("viewers");
 
         } catch (UnknownHostException e) {
             System.err.println();
         }
 
+
+        return this;
     }
 
 }
