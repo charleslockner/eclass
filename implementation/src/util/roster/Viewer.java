@@ -1,7 +1,11 @@
 package util.roster;
 
-import util.roster.Classroom;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 
+import java.net.UnknownHostException;
 import java.util.Collection;
 
 /**
@@ -11,25 +15,25 @@ import java.util.Collection;
  */
 public class Viewer  {
 
+    // the users that i made up when creating roster examples
+    //
+    //    doe, john    |    eve, linda     |     jim, frank     |     pam, jack
 
-    // int classCount
-    // [] of classes
-    // String firstName
-    // String lastName
-    // String grade
-    // boolean currentlyInClass
-    // boolean able2Draw
 
-    // { "classCount":2 ,
-    //   "classes":[ "English 310", "CSC 307"],
-    //   "firstName": "Keith",
-    //   "lastName":"Abdulla",
-    //   "grade": "Senior",
+    // example of json data from mongodb
+    // {
+    //   "ID"              : 1
+    //   "firstName"       : "Keith",
+    //   "lastName"        : "Abdulla",
+    //   "classCount"      : 2,
+    //   "classes"         : [ "English 310", "CSC 307"],
+    //   "grade"           : "Senior",
     //   "currentlyInClass": "true",
-    //   "able2Draw" : "false"
+    //   "able2Draw"       : "false",
+    //   "role"            : "student"
     // }
 
-    private String firstName = "", lastName = "";
+    private String firstName = "", lastName = "", role = "";
     private boolean currentlyInClass = false, able2Draw = false;
     private int classCount = 0, ID;
     private Collection<Classroom> classroom;
@@ -54,8 +58,6 @@ public class Viewer  {
         this.currentlyInClass = inClass;
     }
 
-
-    //
 
 
     public String getFirstName() {
@@ -83,6 +85,8 @@ public class Viewer  {
         return this.classCount;
     }
 
+    public String getRole() { return this.role; }
+
 
     /**
      * This takes the json data from mongodb and unmarshalls it
@@ -91,6 +95,20 @@ public class Viewer  {
      * @param id the id of the viewer
      */
     public void unmarshallViewerDataFromServer(int id) {
+        try {
+            MongoClientURI mongoClientURI =
+                    new MongoClientURI("mongodb://kaabdull:eclass@ds055680.mongolab.com:55680/eclassroom");
+                    /* establish the connection as an actual client now */
+            MongoClient mongoClient = new MongoClient(mongoClientURI);
+                    /* find the database */
+            DB db = mongoClient.getDB("eclassroom");
+                    /* connect to the viewer database */
+            DBCollection collection = db.getCollection("viewers" +
+                    "");
+
+        } catch (UnknownHostException e) {
+            System.err.println();
+        }
 
     }
 
