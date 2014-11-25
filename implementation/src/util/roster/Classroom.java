@@ -1,32 +1,39 @@
 package util.roster;
 
+import java.util.PriorityQueue;
+
 /**
  * Class implementation of a classroom
  */
 public class Classroom {
 
-    private long id;
+    PriorityQueue<Viewer> queue = new PriorityQueue<Viewer>(3, new RosterComparatorAlphaInClass());
 
     private String name;
-    private String url;
-    private long duration;
+    private int currentlyInClass;
 
-    public Classroom() {
-    }
 
-    public Classroom(String name, String url, long duration) {
-        super();
+    public Classroom(String name) {
         this.name = name;
-        this.url = url;
-        this.duration = duration;
     }
 
-    public String getName() {
+
+
+
+    public String getNameOfClass() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    /**
+     *
+     * Useful for the roster view and sorting the users.
+     *
+     * @return the number of current viewers in the class
+     */
+    public int getNumberofViewersCurrentlyInClass() { return currentlyInClass; }
+
+    public void addViewerToCurrentSession() {
+
     }
 
 }

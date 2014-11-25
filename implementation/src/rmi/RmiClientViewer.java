@@ -31,8 +31,6 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
             MongoClient mongoClient = new MongoClient(mongoClientURI);
                     // find the database
             this.db = mongoClient.getDB("eclassroom");
-                    // connect to the viewer database
-            DBCollection collection = db.getCollection("viewers");
         } catch( UnknownHostException e) {
             System.err.println("Unkown Host Exception : " + e);
         }
@@ -75,7 +73,7 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
     @Override
     public Viewer getViewer(int id) {
         viewer = new Viewer();
-        //viewer.unmarshallViewerDataFromServer(id, db);
+        viewer.unmarshallViewerDataFromServer(id, db);
         return viewer;
     }
 

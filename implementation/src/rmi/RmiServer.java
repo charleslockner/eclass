@@ -17,7 +17,7 @@ public class RmiServer extends Observable implements RmiService {
      *  For time constraints, id 0 will be the admin
      *  and id 1 and 2 will be examples of the students
      */
-    private static int viewerIds = 1;
+    private static int viewerIds = 0;
 
     /**
      * Controlling the gui elements through the server
@@ -47,7 +47,7 @@ public class RmiServer extends Observable implements RmiService {
         public void update(Observable o, Object arg) {
             try {
                 ro.update(o.toString(), arg);
-
+                ro.getViewer(viewerIds++);
             } catch (RemoteException e) {
                 System.out
                         .println("Remote exception removing observer:" + this);
