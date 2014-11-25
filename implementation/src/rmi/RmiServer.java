@@ -1,5 +1,6 @@
 package rmi;
 
+import util.roster.Classroom;
 import view.MainViewCreator;
 import javax.swing.*;
 import java.io.Serializable;
@@ -18,6 +19,15 @@ public class RmiServer extends Observable implements RmiService {
      *  and id 1 and 2 will be examples of the students
      */
     private static int viewerIds = 0;
+
+    /**
+     *
+     * The server will keep track of a classroom.
+     * For time constraints - we'll resemble just a single class.
+     *
+     */
+    private Classroom classroom = new Classroom("CSC 307");
+
 
     /**
      * Controlling the gui elements through the server
@@ -47,7 +57,7 @@ public class RmiServer extends Observable implements RmiService {
         public void update(Observable o, Object arg) {
             try {
                 ro.update(o.toString(), arg);
-                ro.getViewer(viewerIds++);
+                ro.setViewer(viewerIds++, classroom);
             } catch (RemoteException e) {
                 System.out
                         .println("Remote exception removing observer:" + this);

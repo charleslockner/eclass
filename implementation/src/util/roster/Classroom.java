@@ -32,8 +32,8 @@ public class Classroom {
      */
     public int getNumberofViewersCurrentlyInClass() { return currentlyInClass; }
 
-    public void addViewerToCurrentSession() {
-
+    public void addViewerToCurrentSession(Viewer viewer) {
+        queue.add(viewer);
     }
 
 }

@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d1b58e2-d7be-48b3-b360-8d47b0eed31c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/roster/Classroom.java" afterPath="$PROJECT_DIR$/src/util/roster/Classroom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rmi/RemoteObserver.java" afterPath="$PROJECT_DIR$/src/rmi/RemoteObserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" afterPath="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rmi/RmiServer.java" afterPath="$PROJECT_DIR$/src/rmi/RmiServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/roster/Viewer.java" afterPath="$PROJECT_DIR$/src/util/roster/Viewer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="implementation.iws" />
@@ -95,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RmiServer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RmiServer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rmi/RmiServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1950">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.45918366" vertical-offset="480" max-vertical-offset="2085">
+              <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -108,8 +107,8 @@
       <file leaf-file-name="RmiClientViewer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rmi/RmiClientViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1215">
-              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1350">
+              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -145,17 +144,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classroom.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Classroom.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/roster/Classroom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30612245" vertical-offset="0" max-vertical-offset="675">
-              <caret line="10" column="94" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="675">
+              <caret line="26" column="64" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
               <folding>
                 <element signature="e#179#187#0" expanded="true" />
                 <element signature="e#324#325#0" expanded="true" />
                 <element signature="e#356#357#0" expanded="true" />
                 <element signature="e#397#398#0" expanded="true" />
                 <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,8 +175,8 @@
       <file leaf-file-name="RemoteObserver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rmi/RemoteObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="345">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -414,16 +415,16 @@
         <option value="$PROJECT_DIR$/src/main/java/rmi/RmiClientViewer.java" />
         <option value="$PROJECT_DIR$/src/main/java/rmi/RmiServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/rmi/RemoteObserver.java" />
-        <option value="$PROJECT_DIR$/src/rmi/RemoteObserver.java" />
         <option value="$PROJECT_DIR$/src/view/chat/ChatboxView.java" />
         <option value="$PROJECT_DIR$/src/util/chat/Chatbox.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/rmi/RmiServer.java" />
-        <option value="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" />
         <option value="$PROJECT_DIR$/src/util/roster/Viewer.java" />
         <option value="$PROJECT_DIR$/src/util/roster/RosterComparator.java" />
         <option value="$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java" />
         <option value="$PROJECT_DIR$/src/util/roster/Classroom.java" />
+        <option value="$PROJECT_DIR$/src/rmi/RemoteObserver.java" />
+        <option value="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" />
+        <option value="$PROJECT_DIR$/src/rmi/RmiServer.java" />
       </list>
     </option>
   </component>
@@ -878,7 +879,11 @@
       <created>1416941376284</created>
       <updated>1416941376284</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create a way to order the roster and start updating classroom get">
+      <created>1416946127132</created>
+      <updated>1416946127132</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -950,7 +955,8 @@
     <MESSAGE value="lets automate our builds with gradle and import mongo and org.json" />
     <MESSAGE value="lets use gradle!" />
     <MESSAGE value="let's not recreate the wheel and use libraries!" />
-    <option name="LAST_COMMIT_MESSAGE" value="let's not recreate the wheel and use libraries!" />
+    <MESSAGE value="create a way to order the roster and start updating classroom get" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a way to order the roster and start updating classroom get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1039,6 +1045,8 @@
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,6 +1130,8 @@
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1205,6 +1215,8 @@
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1234,6 +1246,8 @@
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1307,14 +1321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rmi/RemoteObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/chat/Chatbox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
@@ -1327,22 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <caret line="32" column="64" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rmi/RmiServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1950">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rmi/RmiClientViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1215">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1373,15 +1363,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/roster/Classroom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30612245" vertical-offset="0" max-vertical-offset="675">
-          <caret line="10" column="94" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="675">
+          <caret line="26" column="64" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
             <element signature="e#179#187#0" expanded="true" />
             <element signature="e#324#325#0" expanded="true" />
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/RemoteObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/RmiClientViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1350">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/RmiServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45918366" vertical-offset="480" max-vertical-offset="2085">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

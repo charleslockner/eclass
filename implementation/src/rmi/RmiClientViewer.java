@@ -5,6 +5,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import util.roster.Classroom;
 import util.roster.Viewer;
 import view.MainViewCreator;
 import java.rmi.Naming;
@@ -70,10 +71,19 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
         }
     }
 
+    /**
+     *
+     * This server sets the user and adds them to the classroom
+     *
+     * @param id  the id of the viewer
+     * @param classroom  the classroom that the viewer will be added to
+     * @return the viewer
+     */
     @Override
-    public Viewer getViewer(int id) {
+    public Viewer setViewer(int id, Classroom classroom) {
         viewer = new Viewer();
         viewer.unmarshallViewerDataFromServer(id, db);
+        classroom.addViewerToCurrentSession(viewer);
         return viewer;
     }
 
