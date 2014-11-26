@@ -18,24 +18,37 @@ public class PresentationModel extends Observable {
 		return slideUrls.get(urlNdx);
 	}
 	
-	public String getNextUrl() {
-		if (urlNdx < slideUrls.size() - 1)
-			urlNdx++;
-		return getCurrentUrl();
+	public void setSlide(int index) {
+		if (index > slideUrls.size() - 1)
+			urlNdx = slideUrls.size() - 1;
+		else if (index < 0)
+			urlNdx = 0;
+		else
+			urlNdx = index;
+		
+		setChanged();
+		notifyObservers();
+		clearChanged();
 	}
 	
-	public String getPrevUrl() {
+	public void previousSlide() {
 		if (urlNdx > 0)
 			urlNdx--;
-		return getCurrentUrl();
-	}
-
+		
+//		System.out.println("hi there");
+		
+		setChanged();
+		notifyObservers();
+		clearChanged();
+	}	
+	
 	public void nextSlide() {
 		if (urlNdx < slideUrls.size() - 1)
 			urlNdx++;
 		
-		
-		
+//		System.out.println("bye there");
+				
+		setChanged();
 		notifyObservers();
 		clearChanged();
 	}
