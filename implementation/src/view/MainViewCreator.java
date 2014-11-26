@@ -14,16 +14,15 @@ import javax.swing.*;
 import java.awt.*;              //for layout managers and more
 
 /**
- *
- *  Class that creates the entirety of the electric classroom GUI.
- *
- *  @author kaabdull, charles
- */
+* Class MainViewCreator is in charge of setting up all the views in the application,
+* as well as adding them to the main application frame.
+* @author Charles Lockner (clockner@calpoly.edu), Keith Abdulla (kaabdull@calpoly.edu)
+*/
 public class MainViewCreator extends JPanel {
 
 	PresentationModel presentationModel = new PresentationModel();
 	
-            /* creates our roster view */
+        /* creates our roster view */
     RosterView rosterView = new RosterView();
         /* creates our toolbox view */
     ToolboxView toolboxView = new ToolboxView();
@@ -36,7 +35,9 @@ public class MainViewCreator extends JPanel {
         /* creates our chat box view */
     LecturePrepView lecturePrepView = new LecturePrepView(presentationModel);
 
-
+    /**
+     * @return the chatbox view
+     */
     public ChatboxView getChatboxView() {
         return this.chatboxView;
     }
