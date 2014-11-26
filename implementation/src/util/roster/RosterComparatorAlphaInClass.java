@@ -1,11 +1,12 @@
 package util.roster;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
  * This class will sort by priority - who is in class and their last name
  */
-public class RosterComparatorAlphaInClass implements Comparator<Viewer>
+public class RosterComparatorAlphaInClass implements Comparator<Viewer>, Serializable
 {
     @Override
     public int compare(Viewer x, Viewer y)

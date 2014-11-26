@@ -1,18 +1,25 @@
 package rmi;
 
+import com.mongodb.DB;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import util.roster.Classroom;
+import util.roster.Viewer;
 import view.MainViewCreator;
 import javax.swing.*;
 import java.io.Serializable;
+import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.Date;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
 public class RmiServer extends Observable implements RmiService {
+
+    private DB db;
+
+    private static final long serialVersionUID = 1L;
 
     /**
      *  For time constraints, id 0 will be the admin
@@ -27,6 +34,11 @@ public class RmiServer extends Observable implements RmiService {
      *
      */
     private Classroom classroom = new Classroom("CSC 307");
+
+
+    public Map<String, Viewer> viewerIntegerMap = new HashMap<String, Viewer>();
+
+
 
 
     /**
@@ -56,12 +68,21 @@ public class RmiServer extends Observable implements RmiService {
         @Override
         public void update(Observable o, Object arg) {
             try {
+                // the message being sent over to the client
                 ro.update(o.toString(), arg);
-                ro.setViewer(viewerIds++, classroom);
             } catch (RemoteException e) {
-                System.out
-                        .println("Remote exception removing observer:" + this);
+
+                System.out.println("Remote exception removing observer:" + this);
+
+                Viewer viewer = viewerIntegerMap.get(this.toString());
+
+                // update viewers view status to false
+                viewer.updateViewer(viewer.getId(), db, "currentlyInClass", "false");
+                // remove them from their classroom
+                classroom.removeViewerFromCurrentSession(viewer);
+
                 o.deleteObserver(this);
+
             }
         }
 
@@ -78,8 +99,17 @@ public class RmiServer extends Observable implements RmiService {
      */
     @Override
     public void addObserver(RemoteObserver o) throws RemoteException {
+
+        // create the viewer, add them to the classroom
+        // then add the viewer to the servers viewer database collection
+        Viewer viewer = o.setViewer(viewerIds++, classroom);
+
         WrappedObserver mo = new WrappedObserver(o);
+
+        viewerIntegerMap.put(mo.toString(), viewer);
         addObserver(mo);
+
+
         System.out.println("Added observer:" + mo);
     }
 
@@ -99,6 +129,20 @@ public class RmiServer extends Observable implements RmiService {
     };
 
     public RmiServer() {
+
+        // this should be fired off once for each client
+        try {
+            // talk to mongo
+            MongoClientURI mongoClientURI =
+                    new MongoClientURI("mongodb://kaabdull:eclass@ds055680.mongolab.com:55680/eclassroom");
+            // establish the connection as an actual client now
+            MongoClient mongoClient = new MongoClient(mongoClientURI);
+            // find the database
+            this.db = mongoClient.getDB("eclassroom");
+        } catch( UnknownHostException e) {
+            System.err.println("Unkown Host Exception : " + e);
+        }
+
         thread.start();
     }
 

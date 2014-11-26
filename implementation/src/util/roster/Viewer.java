@@ -6,6 +6,7 @@ import com.mongodb.DBCollection;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 
@@ -13,7 +14,9 @@ import java.util.Collection;
  * Class implementation of the viewer.
  * Each Viewer has an ID and a Name.
  */
-public class Viewer {
+public class Viewer implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     // the users that i made up when creating roster examples
     //
@@ -87,6 +90,26 @@ public class Viewer {
     }
 
 
+
+
+
+    public void updateViewer(int id, DB database, String string, int value) {
+       BasicDBObject updateDoc = new BasicDBObject();
+       updateDoc.append("$set", new BasicDBObject().append(string, value));
+
+       BasicDBObject whereQuery = new BasicDBObject();
+       whereQuery.put("ID", id);
+       database.getCollection("viewers").update(whereQuery, updateDoc);
+    }
+
+    public void updateViewer(int id, DB database, String string, String value) {
+        BasicDBObject updateDoc = new BasicDBObject();
+        updateDoc.append("$set", new BasicDBObject().append(string, value));
+
+        BasicDBObject whereQuery = new BasicDBObject();
+        whereQuery.append("ID", id);
+        database.getCollection("viewers").update(whereQuery, updateDoc);
+    }
 
     /**
      * This takes the json data from mongodb and unmarshalls it
