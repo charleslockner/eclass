@@ -2,15 +2,7 @@ package view.layers;
 
 import javax.swing.*;
 import java.awt.*;
-
-/**
- * Created by Keithmaynn on 11/19/14.
- */
-
-import javax.swing.*;
 import javax.swing.JButton;
-
-import java.awt.*;
 import java.awt.event.*;
 
 
