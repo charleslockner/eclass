@@ -3,8 +3,9 @@ package util.roster;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
-//import org.json.JSONException;
-//import org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -144,25 +145,25 @@ public class Viewer implements Serializable {
          //   "role"            : "student"
          // }
 
-//        try {
-//            JSONObject json = new JSONObject(jsonString);
-//            this.ID = json.getInt("ID");
-//            this.firstName = json.getString("firstName");
-//            this.lastName = json.getString("lastName");
-//            this.classCount = json.getInt("classCount");
-//
-//            //JSONArray jsonArray = json.getJSONArray("classes");
-//            // adding classrooms is a little bit more complex - need to figure out implementation of classroom first
-//
-//            this.grade = json.getString("grade");
-//            this.currentlyInClass = json.getString("currentlyInClass");
-//            this.able2Draw = json.getString("able2Draw");
-//            this.role = json.getString("role");
-//
-//
-//        } catch (JSONException e) {
-//            System.err.println("JSON EXECEPTION " + e);
-//        }
+        try {
+            JSONObject json = new JSONObject(jsonString);
+            this.ID = json.getInt("ID");
+            this.firstName = json.getString("firstName");
+            this.lastName = json.getString("lastName");
+            this.classCount = json.getInt("classCount");
+
+            //JSONArray jsonArray = json.getJSONArray("classes");
+            // adding classrooms is a little bit more complex - need to figure out implementation of classroom first
+
+            this.grade = json.getString("grade");
+            this.currentlyInClass = json.getString("currentlyInClass");
+            this.able2Draw = json.getString("able2Draw");
+            this.role = json.getString("role");
+
+
+        } catch (JSONException e) {
+            System.err.println("JSON EXECEPTION " + e);
+        }
 
         System.out.println("STUDENT ROLE IS : " + getRole());
 
