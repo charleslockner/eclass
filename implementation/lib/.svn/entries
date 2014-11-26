@@ -1,0 +1,41 @@
+8
+
+dir
+304
+svn+ssh://clockner@unix3.csc.calpoly.edu/home/kaabdull/projects/SVN/electric-classroom/trunk/implementation/lib
+svn+ssh://clockner@unix3.csc.calpoly.edu/home/kaabdull/projects/SVN
+
+
+
+2014-11-21T22:14:53.233102Z
+292
+kaabdull
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8d3ac176-f8d4-485c-ba46-58ac520be4c5
+
+mongo-2.10.1.jar
+file
+
+
+
+
+2014-11-23T02:16:03.000000Z
+e12feedcdd249b3973e24d03f6cb5131
+2014-11-21T22:14:53.233102Z
+292
+kaabdull
+has-props
+
