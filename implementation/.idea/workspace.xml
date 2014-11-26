@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d1b58e2-d7be-48b3-b360-8d47b0eed31c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/util/roster/Roster.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/roster/Classroom.java" afterPath="$PROJECT_DIR$/src/util/roster/Classroom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rmi/RemoteObserver.java" afterPath="$PROJECT_DIR$/src/rmi/RemoteObserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" afterPath="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rmi/RmiServer.java" afterPath="$PROJECT_DIR$/src/rmi/RmiServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java" afterPath="$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/roster/Viewer.java" afterPath="$PROJECT_DIR$/src/util/roster/Viewer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="implementation.iws" />
@@ -77,7 +79,7 @@
       <file leaf-file-name="Chatbox.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/chat/Chatbox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="690">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="660">
               <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
@@ -87,29 +89,41 @@
       <file leaf-file-name="ChatboxView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/chat/ChatboxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
               <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RmiServer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RmiServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rmi/RmiServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45918366" vertical-offset="480" max-vertical-offset="2085">
-              <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="3030">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1027#1043#0" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="e#1453#1454#0" expanded="true" />
+                <element signature="e#3195#3553#0" expanded="true" />
+                <element signature="e#3545#3546#0" expanded="true" />
+                <element signature="e#4438#4703#0" expanded="true" />
+                <element signature="e#4688#4689#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RmiClientViewer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RmiClientViewer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rmi/RmiClientViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1350">
-              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.6020408" vertical-offset="350" max-vertical-offset="1410">
+              <caret line="53" column="82" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+              <folding>
+                <element signature="e#2923#2924#0" expanded="true" />
+                <element signature="e#2985#2986#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,19 +131,11 @@
       <file leaf-file-name="Viewer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/roster/Viewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2025">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Roster.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/roster/Roster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2370">
+              <caret line="118" column="108" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,16 +153,16 @@
       <file leaf-file-name="Classroom.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/roster/Classroom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="675">
-              <caret line="26" column="64" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="840">
+              <caret line="40" column="72" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
               <folding>
-                <element signature="e#179#187#0" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#328#336#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#903#904#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,9 +171,11 @@
       <file leaf-file-name="RosterComparatorAlphaInClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="525">
+              <caret line="5" column="115" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +184,7 @@
         <entry file="file://$PROJECT_DIR$/src/rmi/RemoteObserver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -418,9 +426,9 @@
         <option value="$PROJECT_DIR$/src/view/chat/ChatboxView.java" />
         <option value="$PROJECT_DIR$/src/util/chat/Chatbox.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/util/roster/Viewer.java" />
         <option value="$PROJECT_DIR$/src/util/roster/RosterComparator.java" />
         <option value="$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java" />
+        <option value="$PROJECT_DIR$/src/util/roster/Viewer.java" />
         <option value="$PROJECT_DIR$/src/util/roster/Classroom.java" />
         <option value="$PROJECT_DIR$/src/rmi/RemoteObserver.java" />
         <option value="$PROJECT_DIR$/src/rmi/RmiClientViewer.java" />
@@ -489,6 +497,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -883,7 +895,11 @@
       <created>1416946127132</created>
       <updated>1416946127132</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="server serves up the classroom and adds viewers to them">
+      <created>1416947135107</created>
+      <updated>1416947135107</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -917,9 +933,10 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711443" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -929,7 +946,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24655014" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19930555" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32711443" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -956,7 +973,8 @@
     <MESSAGE value="lets use gradle!" />
     <MESSAGE value="let's not recreate the wheel and use libraries!" />
     <MESSAGE value="create a way to order the roster and start updating classroom get" />
-    <option name="LAST_COMMIT_MESSAGE" value="create a way to order the roster and start updating classroom get" />
+    <MESSAGE value="server serves up the classroom and adds viewers to them" />
+    <option name="LAST_COMMIT_MESSAGE" value="server serves up the classroom and adds viewers to them" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1000,7 +1018,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="2580">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1027#1043#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#3195#3553#0" expanded="true" />
+            <element signature="e#3545#3546#0" expanded="true" />
+            <element signature="e#4438#4703#0" expanded="true" />
+            <element signature="e#4688#4689#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,7 +1035,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="840">
           <caret line="17" column="144" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#2923#2924#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,6 +1046,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
           <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,7 +1062,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="705">
           <caret line="27" column="119" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,13 +1073,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="570">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#179#187#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#336#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1085,7 +1118,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="2580">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1027#1043#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#3195#3553#0" expanded="true" />
+            <element signature="e#3545#3546#0" expanded="true" />
+            <element signature="e#4438#4703#0" expanded="true" />
+            <element signature="e#4688#4689#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,7 +1135,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="840">
           <caret line="17" column="144" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#2923#2924#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,6 +1146,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
           <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,7 +1162,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="705">
           <caret line="27" column="119" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1125,13 +1173,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="570">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#179#187#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#336#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1170,7 +1218,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="2580">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1027#1043#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#3195#3553#0" expanded="true" />
+            <element signature="e#3545#3546#0" expanded="true" />
+            <element signature="e#4438#4703#0" expanded="true" />
+            <element signature="e#4688#4689#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,7 +1235,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="840">
           <caret line="17" column="144" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#2923#2924#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,6 +1246,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
           <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,7 +1262,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="705">
           <caret line="27" column="119" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1210,13 +1273,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="570">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#179#187#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#336#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1241,13 +1304,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="600">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#179#187#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#336#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1286,6 +1349,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
           <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,6 +1377,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/roster/Viewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2370">
+          <caret line="118" column="108" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/RemoteObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/roster/Classroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="840">
+          <caret line="40" column="72" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#336#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="525">
+          <caret line="5" column="115" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/chat/ChatboxView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
@@ -1329,75 +1445,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/rmi/RmiServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/roster/Viewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2025">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/roster/Roster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/roster/RosterComparatorAlphaInClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/roster/Classroom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="675">
-          <caret line="26" column="64" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="3030">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
-            <element signature="e#179#187#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1027#1043#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#3195#3553#0" expanded="true" />
+            <element signature="e#3545#3546#0" expanded="true" />
+            <element signature="e#4438#4703#0" expanded="true" />
+            <element signature="e#4688#4689#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rmi/RemoteObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rmi/RmiClientViewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1350">
-          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rmi/RmiServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45918366" vertical-offset="480" max-vertical-offset="2085">
-          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-          <folding />
+        <state vertical-scroll-proportion="0.6020408" vertical-offset="350" max-vertical-offset="1410">
+          <caret line="53" column="82" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+          <folding>
+            <element signature="e#2923#2924#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

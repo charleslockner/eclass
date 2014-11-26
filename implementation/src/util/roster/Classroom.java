@@ -1,16 +1,22 @@
 package util.roster;
 
+import com.mongodb.DB;
+
+import java.io.Serializable;
 import java.util.PriorityQueue;
 
 /**
  * Class implementation of a classroom
  */
-public class Classroom {
+public class Classroom implements Serializable {
 
-    PriorityQueue<Viewer> queue = new PriorityQueue<Viewer>(3, new RosterComparatorAlphaInClass());
+    private static final long serialVersionUID = 1L;
+
+    PriorityQueue<Viewer> rosterQueue =
+            new PriorityQueue<Viewer>(3, new RosterComparatorAlphaInClass());
 
     private String name;
-    private int currentlyInClass;
+    private int currentlyInClass = 0;
 
 
     public Classroom(String name) {
@@ -33,7 +39,12 @@ public class Classroom {
     public int getNumberofViewersCurrentlyInClass() { return currentlyInClass; }
 
     public void addViewerToCurrentSession(Viewer viewer) {
-        queue.add(viewer);
+        rosterQueue.add(viewer);
+    }
+
+    public void removeViewerFromCurrentSession(Viewer viewer) {
+        rosterQueue.remove(viewer);
+        System.out.println("THIS WAS CALLED");
     }
 
 }
