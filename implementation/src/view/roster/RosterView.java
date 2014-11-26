@@ -84,8 +84,10 @@ public class RosterView extends JPanel {
                 new Object[][]
                         {
                                 {"Doe, John", "true", "false", new Boolean(false)},
-                                {"Doe, John", "false", "false", new Boolean(false)},
-                                {"Eve, Linda", "true", "false", new Boolean(false)}
+                                {"Eve, Linda", "true", "true", new Boolean(false)},
+                                {"Jim, Frank", "true", "false", new Boolean(false)},
+                                {"Pam, Jack", "true", "false", new Boolean(false)},
+                                {"Adam, James", "false", "false", new Boolean(false)},
                         }, headerStr);
 
         JTable table = new JTable(dm);

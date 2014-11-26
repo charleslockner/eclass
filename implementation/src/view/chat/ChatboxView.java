@@ -42,7 +42,8 @@ public class ChatboxView extends JPanel {
      *
      * Set up the chat box view
      *   - set up timer action lister to resemble pulling
-     *   - then update it is an ajax
+     *   - then update it like an ajax call since swing doesnt
+     *   support concurrency  :(
      *
      */
     public void setupChatboxView() {
