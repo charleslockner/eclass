@@ -17,6 +17,7 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
 
     private Viewer viewer;
     private DB db;
+    private static final long serialVersionUID = 1L;
 
 
     protected RmiClientViewer() throws RemoteException {
@@ -81,7 +82,7 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
      */
     @Override
     public Viewer setViewer(int id, Classroom classroom) {
-        viewer = new Viewer();
+        this.viewer = new Viewer();
         viewer.unmarshallViewerDataFromServer(id, db);
         classroom.addViewerToCurrentSession(viewer);
         return viewer;
