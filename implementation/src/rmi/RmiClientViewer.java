@@ -70,7 +70,10 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
     }
+
+
 
     /**
      *

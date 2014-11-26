@@ -2,6 +2,8 @@ package util.chat;
 
 
 import com.mongodb.*;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.net.UnknownHostException;
 
@@ -31,10 +33,26 @@ public class Chatbox {
         }
     }
 
-    public String getOneChat() {
+    public DBCollection getChatCollection() {
+        return this.collection;
+    }
+
+    public String getAllChats() {
         BasicDBObject whereQuery = new BasicDBObject();
-        whereQuery.put("id", 1);
-        return collection.find(whereQuery).next().toString();
+        StringBuilder stringBuilder = new StringBuilder();
+
+
+        DBCursor cursor = collection.find(whereQuery);
+        while( cursor.hasNext() ) {
+            try {
+                JSONObject json = new JSONObject(cursor.next().toString());
+                stringBuilder.append(json.getString("chat") + "\n");
+            } catch( JSONException e) {
+                System.err.println("JSON error : " + e);
+            }
+        }
+
+        return stringBuilder.toString();
     }
 
 }

@@ -1,5 +1,6 @@
 package view;
 
+import util.roster.Viewer;
 import view.chat.ChatboxView;
 import view.layers.LayerView;
 import view.prep.LecturePrepView;
@@ -13,6 +14,8 @@ import java.awt.*;              //for layout managers and more
 
 
 public class MainViewCreator extends JPanel {
+
+    private Viewer viewer;
 
             /* creates our roster view */
     RosterView rosterView = new RosterView();
@@ -37,8 +40,6 @@ public class MainViewCreator extends JPanel {
      */
     public MainViewCreator() {
         setLayout(new BorderLayout());
-
-
 
         /* Left Pane => roster view + layer view + toolbox view  */
         JPanel leftPane = new JPanel(new BorderLayout());

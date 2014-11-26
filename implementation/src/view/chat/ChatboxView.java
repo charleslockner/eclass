@@ -1,5 +1,6 @@
 package view.chat;
 
+import com.mongodb.BasicDBObject;
 import util.chat.Chatbox;
 
 import javax.swing.*;
@@ -10,6 +11,7 @@ import java.awt.event.InputMethodEvent;
 import java.awt.event.InputMethodListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -25,7 +27,13 @@ public class ChatboxView extends JPanel {
         setupChatboxView();
     }
 
-
+    /**
+     *
+     * Set up the chat box view
+     *   - set up timer action lister to resemble pulling
+     *   - then update it is an ajax
+     *
+     */
     public void setupChatboxView() {
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -40,7 +48,7 @@ public class ChatboxView extends JPanel {
         ActionListener actionListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                convoPane.setText(chatbox.getOneChat());
+                convoPane.setText(chatbox.getAllChats());
             }
         };
 
@@ -49,17 +57,22 @@ public class ChatboxView extends JPanel {
 
         //
 
-        /* THIS IS WHERE YOU CAN WRITE A CHAT RESPONSE */
+        // THIS IS WHERE YOU CAN WRITE A CHAT RESPONSE
         this.textArea = new JTextArea("Write to the chat...", 5, 10);
         JScrollPane scrollPane = new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
                 JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-        /* button to click to submit your response */
+        // button to click to submit your response
         this.submitButton = new JButton();
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                convoPane.setText(textArea.getText());
+                BasicDBObject document = new BasicDBObject();
+                document.put("date", new Date());
+                document.put("chat", textArea.getText());
+                chatbox.getChatCollection().insert(document);
+                // when button is clicked, erase the text
+                convoPane.setText("");
             }
         });
 
