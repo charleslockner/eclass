@@ -13,7 +13,12 @@ import javax.swing.*;
 
 import java.awt.*;              //for layout managers and more
 
-
+/**
+ *
+ *  Class that creates the entirety of the electric classroom GUI.
+ *
+ *  @author kaabdull, charles
+ */
 public class MainViewCreator extends JPanel {
 
 	PresentationModel presentationModel = new PresentationModel();
