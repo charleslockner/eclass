@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d1b58e2-d7be-48b3-b360-8d47b0eed31c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/ViewerTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/roster/ProfClassView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implementation.iml" afterPath="$PROJECT_DIR$/implementation.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/ViewerTest.java" afterPath="$PROJECT_DIR$/src/test/ViewerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="implementation.iws" />
@@ -116,8 +114,8 @@
       <file leaf-file-name="Viewer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/roster/Viewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1347" max-vertical-offset="2265">
+              <caret line="159" column="47" selection-start-line="159" selection-start-column="47" selection-end-line="159" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -126,8 +124,8 @@
       <file leaf-file-name="ViewerTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/ViewerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25896415" vertical-offset="0" max-vertical-offset="1425">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.1992032" vertical-offset="0" max-vertical-offset="1455">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -877,7 +875,11 @@
       <created>1416981082327</created>
       <updated>1416981082327</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="create a viewer test">
+      <created>1416981591417</created>
+      <updated>1416981591417</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -954,7 +956,8 @@
     <MESSAGE value="server serves up the classroom and adds viewers to them" />
     <MESSAGE value="server knows when viewer has logged in and out" />
     <MESSAGE value="create table model to update data in the roster" />
-    <option name="LAST_COMMIT_MESSAGE" value="create table model to update data in the roster" />
+    <MESSAGE value="create a viewer test" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a viewer test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1350,16 +1353,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/roster/Viewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1347" max-vertical-offset="2265">
+          <caret line="159" column="47" selection-start-line="159" selection-start-column="47" selection-end-line="159" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ViewerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25896415" vertical-offset="0" max-vertical-offset="1425">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.1992032" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
