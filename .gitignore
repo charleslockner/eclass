@@ -1,7 +1,8 @@
 *.class
-implementation/.idea
+implementation/.idea/misc.xml
 workspace.xml
 .metadata
+.idea
 
 #
 implementation/build/classes
