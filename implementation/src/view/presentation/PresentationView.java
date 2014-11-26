@@ -9,11 +9,14 @@ import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
-/**This is the class
+/**
+ * This is the class
  * for the presentation view of 
  * the electric-classroom application,
  * includes all the tools that are in view*/
 public class PresentationView extends JPanel implements Observer {
+	
+	private static final long serialVersionUID = 1L;
 	private PresentationModel model;
 
 	JEditorPane editorPane;

@@ -1,5 +1,9 @@
 package util.presentation;
 
+/**
+ * This class is responsible for handling functions related to the tools menu
+ * @author Charles Lockner (clockner@calpoly.edu)
+ */
 public abstract class ToolsModel {
    
    /**

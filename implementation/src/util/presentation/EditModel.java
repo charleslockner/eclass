@@ -1,5 +1,10 @@
 package util.presentation;
 
+
+/**
+ * This class is responsible for handling functions related to the edit menu
+ * @author Charles Lockner (clockner@calpoly.edu)
+ */
 public abstract class EditModel {
    
    /**
