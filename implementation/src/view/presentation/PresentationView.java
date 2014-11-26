@@ -1,6 +1,9 @@
 package view.presentation;
 
 import javax.swing.*;
+
+import util.presentation.PresentationModel;
+
 import java.awt.*;
 import java.io.IOException;
 
@@ -9,19 +12,18 @@ import java.io.IOException;
  * the electric-classroom application,
  * includes all the tools that are in view*/
 public class PresentationView extends JPanel {
+	private PresentationModel model;
 
-
-    public PresentationView () {
+    public PresentationView (PresentationModel model) {
+    	this.model = model;
         setupPresentationView();
     }
-
 
     public void setupPresentationView() {
 
         JEditorPane editorPane = new JEditorPane();
         try {
-            editorPane.setPage("http://users.csc.calpoly.edu/~kaabdull/" +
-                    "projects/work/electric-classroom/requirements/index.html");
+            editorPane.setPage(model.getCurrentUrl());
 
             JScrollPane scrollPane = new JScrollPane(editorPane);
             scrollPane.setVerticalScrollBarPolicy(
