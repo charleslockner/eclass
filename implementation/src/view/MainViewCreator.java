@@ -1,5 +1,6 @@
 package view;
 
+import util.presentation.PresentationModel;
 import view.chat.ChatboxView;
 import view.layers.LayerView;
 import view.prep.LecturePrepView;
@@ -9,11 +10,14 @@ import view.roster.RosterView;
 import view.tools.ToolboxView;
 
 import javax.swing.*;
+
 import java.awt.*;              //for layout managers and more
 
 
 public class MainViewCreator extends JPanel {
 
+	PresentationModel presentationModel = new PresentationModel();
+	
             /* creates our roster view */
     RosterView rosterView = new RosterView();
         /* creates our toolbox view */
@@ -21,11 +25,11 @@ public class MainViewCreator extends JPanel {
         /* creates our layer view */
     LayerView layerView = new LayerView();
         /* creates our presentation view */
-    PresentationView presentationView = new PresentationView();
+    PresentationView presentationView = new PresentationView(presentationModel);
         /* creates our chat box view */
     ChatboxView chatboxView = new ChatboxView();
         /* creates our chat box view */
-    LecturePrepView lecturePrepView = new LecturePrepView();
+    LecturePrepView lecturePrepView = new LecturePrepView(presentationModel);
 
 
     public ChatboxView getChatboxView() {
@@ -84,6 +88,4 @@ public class MainViewCreator extends JPanel {
         frame.setVisible(true);
 
     }
-
-
 }
