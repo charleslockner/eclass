@@ -11,6 +11,12 @@ import java.net.UnknownHostException;
 
 import static org.junit.Assert.*;
 
+/**
+ *
+ * Test case for the viewer class.
+ *
+ * @author kaabdull
+ */
 public class ViewerTest {
 
     private Viewer viewer;

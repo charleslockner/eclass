@@ -13,6 +13,11 @@ import java.rmi.RemoteException;
 import java.net.UnknownHostException;
 import java.rmi.server.UnicastRemoteObject;
 
+/**
+ *
+ * This class implements a client, which is a viewer.
+ * @author kaabdull
+ */
 public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserver {
 
     private Viewer viewer;
@@ -20,6 +25,12 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
     private static final long serialVersionUID = 1L;
 
 
+    /**
+     *
+     * Constructor for the client creation and make an instance of mongo
+     *
+     * @throws RemoteException
+     */
     protected RmiClientViewer() throws RemoteException {
         super();
 
@@ -40,8 +51,14 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
     }
 
 
-
-
+    /**
+     *
+     * Main connects client to the server.
+     * Adds an instance of the client to the server.
+     * Then generates the graphical user interface of eclassroom
+     *
+     * @param args  n/a not used here
+     */
     public static void main(String[] args) {
 
         /**
@@ -92,6 +109,15 @@ public class RmiClientViewer extends UnicastRemoteObject implements RemoteObserv
     }
 
 
+    /**
+     *
+     * The method that is used to talk from the server to the client.
+     * Wish I had more time to implement
+     *
+     * @param observable
+     * @param updateMsg the message being sent
+     * @throws RemoteException
+     */
     @Override
     public void update(Object observable, final Object updateMsg)
             throws RemoteException {

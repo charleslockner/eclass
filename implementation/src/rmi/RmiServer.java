@@ -20,6 +20,7 @@ import java.util.*;
  *
  * Class that resembles a server for electric classroom.
  *
+ * @author kaabdull
  */
 public class RmiServer extends Observable implements RmiService {
 
@@ -47,9 +48,6 @@ public class RmiServer extends Observable implements RmiService {
      *
      */
     public Map<String, Viewer> viewerIntegerMap = new HashMap<String, Viewer>();
-
-
-
 
     /**
      * Controlling the gui elements through the server
