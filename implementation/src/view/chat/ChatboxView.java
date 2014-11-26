@@ -19,6 +19,8 @@ import java.util.Observer;
  *
  * This class creates the view for the chat box.
  *
+ * @author kaabdull
+ *
  */
 public class ChatboxView extends JPanel {
 
