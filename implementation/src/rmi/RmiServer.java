@@ -15,6 +15,12 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
+
+/**
+ *
+ * Class that resembles a server for electric classroom.
+ *
+ */
 public class RmiServer extends Observable implements RmiService {
 
     private DB db;
@@ -35,7 +41,11 @@ public class RmiServer extends Observable implements RmiService {
      */
     private Classroom classroom = new Classroom("CSC 307");
 
-
+    /**
+     *
+     * This keeps track of who is added to the server and who leaves.
+     *
+     */
     public Map<String, Viewer> viewerIntegerMap = new HashMap<String, Viewer>();
 
 
@@ -127,6 +137,10 @@ public class RmiServer extends Observable implements RmiService {
         };
     };
 
+    /**
+     * Constructor for the server.
+     * Create an instance of mongodb and start a new thread.
+     */
     public RmiServer() {
 
         // this should be fired off once for each client

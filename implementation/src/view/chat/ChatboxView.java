@@ -15,6 +15,11 @@ import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ *
+ * This class creates the view for the chat box.
+ *
+ */
 public class ChatboxView extends JPanel {
 
     private JEditorPane convoPane;
@@ -23,6 +28,10 @@ public class ChatboxView extends JPanel {
     private JButton submitButton;
     private Chatbox chatbox = new Chatbox();
 
+    /**
+     * Constructor for the chatbox view.
+     * Inside of it we just set the entirity of the view up.
+     */
     public ChatboxView() {
         setupChatboxView();
     }
