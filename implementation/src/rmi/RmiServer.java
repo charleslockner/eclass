@@ -89,7 +89,6 @@ public class RmiServer extends Observable implements RmiService {
     }
 
 
-
     /**
      *
      * Adding observers is like adding viewers to an application
