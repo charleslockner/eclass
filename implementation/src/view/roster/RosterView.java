@@ -30,6 +30,10 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
 
 /**
+ *
+ * Table that demonstrates the roster viewer.
+ *
+ * Majority taking from java2s Sortable table.
  * @version 1.0 02/25/99
  */
 public class RosterView extends JPanel {
