@@ -36,7 +36,9 @@ public class Classroom implements Serializable {
      *
      * @return the number of current viewers in the class
      */
-    public int getNumberofViewersCurrentlyInClass() { return currentlyInClass; }
+    public int getNumberofViewersCurrentlyInClass() {
+        return currentlyInClass;
+    }
 
     public void addViewerToCurrentSession(Viewer viewer) {
         rosterQueue.add(viewer);
