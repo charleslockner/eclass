@@ -4,7 +4,10 @@ import java.io.Serializable;
 import java.util.Comparator;
 
 /**
- * This class will sort by priority - who is in class and their last name
+ * This class will sort by priority - who is in class and their last name.
+ *
+ * @author kaabdull
+ *
  */
 public class RosterComparatorAlphaInClass implements Comparator<Viewer>, Serializable
 {

@@ -14,6 +14,8 @@ import java.util.Collection;
 /**
  * Class implementation of the viewer.
  * Each Viewer has an ID and a Name.
+ *
+ * @author kaabdull
  */
 public class Viewer implements Serializable {
 
