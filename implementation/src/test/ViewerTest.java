@@ -26,7 +26,8 @@ public class ViewerTest {
             // find the database
             DB db = mongoClient.getDB("eclassroom");
 
-            // testing unmarshal viewer data by writing the other get methods for viewer
+            // IF ALL TEST PASS
+            // WE KNOW UNMARSHAL VIEWER WORKS
             this.viewer = new Viewer().unmarshallViewerDataFromServer(5, db);
         } catch( UnknownHostException e) {
             assert(false);
