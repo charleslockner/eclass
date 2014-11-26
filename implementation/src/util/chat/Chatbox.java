@@ -8,6 +8,9 @@ import org.json.JSONObject;
 import java.net.UnknownHostException;
 
 /**
+ *
+ * Class resembles the functionality of the chatbox.
+ *
  * @author kaabdull
  */
 public class Chatbox {

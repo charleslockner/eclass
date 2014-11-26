@@ -2,11 +2,7 @@ package view.roster;
 
 import util.roster.Viewer;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Insets;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
@@ -40,6 +36,7 @@ public class RosterView extends JPanel {
 
     public RosterView() {
         setLayout(new BorderLayout());
+        setPreferredSize(new Dimension(250, 200));
         String[] headerStr = { "Student", "In-Class", "Allow 2 Draw", "Question" };
         int[] columnWidth = { 100, 150, 100, 50 };
 
@@ -86,7 +83,7 @@ public class RosterView extends JPanel {
                                 {"Doe, John", "true", "false", new Boolean(false)},
                                 {"Eve, Linda", "true", "true", new Boolean(false)},
                                 {"Jim, Frank", "true", "false", new Boolean(false)},
-                                {"Pam, Jack", "true", "false", new Boolean(false)},
+                                {"Pam, Jack", "true", "false", new Boolean(true)},
                                 {"Adam, James", "false", "false", new Boolean(false)},
                         }, headerStr);
 
