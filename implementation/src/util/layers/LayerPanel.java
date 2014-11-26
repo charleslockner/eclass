@@ -7,7 +7,7 @@ import java.util.Collection;
  * a collection of layers. Methods of this class will perform
  * operations on this collection to reflect which layers
  * are currently in existance.
- * @author charleslockner
+ * @author Charles Lockner (clockner@calpoly.edu)
  *
  */
 public abstract class LayerPanel {

@@ -2,7 +2,7 @@ package util.layers;
 
 /**
  * Describes a layer that will be used by the client to draw on and move around.
- * @author charleslockner
+ * @author Charles lockner (clockner@calpoly.edu)
  *
  */
 public abstract class Layer {
