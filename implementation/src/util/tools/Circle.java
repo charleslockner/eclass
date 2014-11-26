@@ -2,42 +2,67 @@ package util.tools;
 
 import java.awt.Point;
 
-/**
- * Class implementation of the circle
+/****
+ * Class Circle gives the properties of a circle and allows the creation and
+ * modification of a circle in the canvas. Methods to get and set the center
+ * position and radius of a circle.
+ *
+ * @author Eric Yun(eryun@calpoly.edu)
  */
-public abstract class Circle extends Shape {
-   Point center;
+public abstract class Circle {
+
+   /**
+    * Point position is the center point of the circle
+    * int radius is the radius of the circle, which marks the boundary of the
+    * circle from its epicenter
+    */
+   Point position;
    int radius;
-   
+
    /**
-     * Creates a new circle
-     */
-   abstract void createCircle(Point center, int radius);
-   
+    * Constructor to create a new rectangle
+    *
+    * @param x The x coordinate of the circle's center
+    * @param y The y coordinate of the circle's center
+    * @param radius The length of the circle
+    */
+   public Circle(int x, int y, int radius) {
+      position.setLocation(x, y);
+      this.radius = radius;
+   }
+
    /**
-     * Moves the center of the circle
-     */
+    * Returns the center position of the rectangle
+    * @return position The center of the circle
+    */
+   public Point getPosition(){
+      return this.position;
+   }
      
    /*@ 
       requires
-         // new center Point must be within the boundaries of the layer canvas
-         center.x < 200 && center.x > -200
-            && center.y < 200 && center.y > -200
+         // position Point must be within the boundaries of the layer canvas
+         position.getX() < 1000 && position.getX() > 200
+            && position.getY() < 1000 && position.getY() > 200
             
       ensures
-         // center Point must be within the boundaries of the layer canvas
-         center.x < 200 && center.x > -200
-            && center.y < 200 && center.y > -200
+         // position Point must be within the boundaries of the layer canvas
+         position.getX() < 1000 && position.getX() > 200
+            && position.getY() < 1000 && position.getY() > 200
    @*/
-   abstract void updateCenter(Point center);
-   
    /**
-     * Changes the radius of the circle
-     */
-   abstract void updateRadius(int radius);
-   
+    * Sets the position of the circle
+    * @param position The center position of the circle
+    */
+   public void setPosition(Point position){
+      this.position = position;
+   }
+
    /**
-     * Deletes the circle
-     */
-   abstract void delete();
+    * Sets the radius of the circle
+    * @param radius The radius of the circle
+    */
+   public void setRadius(int radius) {
+      this.radius = radius;
+   }
 }
