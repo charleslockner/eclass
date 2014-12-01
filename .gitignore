@@ -3,7 +3,7 @@ implementation/.idea/misc.xml
 workspace.xml
 .metadata
 .idea
-
+.DS_Store
 #
 implementation/build/classes
 implementation/.gradle
