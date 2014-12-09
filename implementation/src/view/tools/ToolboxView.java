@@ -1,7 +1,6 @@
 package view.tools;
 
 import util.tools.Text;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
@@ -59,15 +58,11 @@ public class ToolboxView extends JPanel {
         add(text);
         setPreferredSize(new Dimension(250, 250));
         setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createTitledBorder("Toolbox"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
+          BorderFactory.createTitledBorder("Toolbox"),
+          BorderFactory.createEmptyBorder(5,5,5,5)));
 
-
-
-        line.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        line.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 canvas.add(new Line2D.Double(lineX1, lineY1, lineX2, lineY2));
                 lineX1 += 20;
                 lineY1 += 10;
@@ -77,10 +72,8 @@ public class ToolboxView extends JPanel {
             }
         });
 
-        circle.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        circle.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 canvas.add(new Ellipse2D.Double(circX, circY, 40, 40));
                 circX += 30;
                 circY += 30;
@@ -88,10 +81,8 @@ public class ToolboxView extends JPanel {
             }
         });
 
-        rectangle.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        rectangle.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 canvas.add(new Rectangle(rectX, rectY, 40, 40));
                 rectX += 50;
                 rectY += 40;
@@ -99,11 +90,8 @@ public class ToolboxView extends JPanel {
             }
         });
 
-        text.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
-                //canvas.add(new String("Hello there"));
+        text.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 canvas.add(new Text(textX, textY, "Hello there"));
                 textX += 30;
                 textY += 30;
@@ -112,6 +100,10 @@ public class ToolboxView extends JPanel {
         });
     }
 
+    /**
+     * Method to draw each element in the canvas array using the Graphics2D class
+     * every time a new object is added to teh canvas array
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
@@ -119,7 +111,6 @@ public class ToolboxView extends JPanel {
         for(int i = 0; i < canvas.size(); i++) {
             if(canvas.get(i) instanceof util.tools.Text) {
                 g2.setFont(new Font("TimesRoman", Font.PLAIN, 18));
-                //g2.drawString((String)canvas.get(i), textX, textY);
                 g2.drawString(((Text)canvas.get(i)).getBlock(),
                   (int)((Text)canvas.get(i)).getLocation().getX(),
                   (int)((Text)canvas.get(i)).getLocation().getY());
