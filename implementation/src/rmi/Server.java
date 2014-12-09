@@ -18,6 +18,7 @@ import com.esotericsoftware.minlog.Log;
  * As the clients sign into "localhost", they can talk to other clients.
  *
  * source: https://code.google.com/p/kryonet/
+ * @author nathan kaabdull
  *
  */
 public class Server {
@@ -28,7 +29,7 @@ public class Server {
      * ChatConnection returns a subclass of connection with more information, such as
      * the name of the user signing in.
      *
-     * @throws IOException  if can't connet to the port
+     * @throws IOException  if can't connect to the port
      */
     public Server() throws IOException {
         server = new com.esotericsoftware.kryonet.Server() {
