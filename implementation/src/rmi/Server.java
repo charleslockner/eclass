@@ -118,8 +118,6 @@ public class Server {
                     }
 
 
-
-
                     // Prepend the connection's name and send to everyone.
                     chatMessage.text = connection.name + ": " + message;
                     server.sendToAllTCP(chatMessage);
