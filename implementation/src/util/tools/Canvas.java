@@ -1,42 +1,45 @@
 package util.tools;
 
-import java.awt.Graphics2D;
-import java.awt.Point;
 import java.util.ArrayList;
 
 
 /****
- * Canvas class which contains an ArrayList called array to hold the various shapes
- * drawn on screen. Shapes can be added or deleted from the array.
+ * Canvas class which contains an ArrayList called array to hold the various objects
+ * drawn on screen. Objects can be added or deleted from the array.
  *
  * @author Eric Yun (eryun@calpoly.edu)
  */
 public class Canvas {
-    private ArrayList<Shape> array = new ArrayList<Shape>();
+    private ArrayList<Object> array = new ArrayList<Object>();
 
-    /* Constructor */
-    public Canvas()
+    /**
+     * Adds the specified object to the end of the canvas array.
+     *
+     * @param object The object to be added to the canvas array
+     */
+    public void add(Object object)
     {
+        array.add(object);
     }
 
     /**
-     * Adds the specified shape to the end of the canvas array.
+     * Removes the last element in the canvas, and returns its content.
      *
-     * @param shape The shape to be added to the canvas array
+     * @return The object being removed from the array
      */
-    public void add(Shape shape)
+    public Object delete()
     {
-        array.add(shape);
+        return array.remove(array.size() - 1);
     }
 
     /**
-     * Removes the shape from the canvas array at the specified index.
+     * Returns the object at the specified position in the canvas array.
      *
-     * @param index The array index to remove the shape from
-     * @return The shape being removed from the array
+     * @param index The element position in the array
+     * @return The object at the specified position in the array
      */
-    public Shape delete(int index)
+    public Object get(int index)
     {
-        return array.remove(index);
+        return array.get(index);
     }
 }

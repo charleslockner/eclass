@@ -102,7 +102,7 @@ public class ToolboxView extends JPanel {
 
     /**
      * Method to draw each element in the canvas array using the Graphics2D class
-     * every time a new object is added to teh canvas array
+     * every time a new object is added to the canvas array
      */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
