@@ -1,5 +1,7 @@
 package view.tools;
 
+import util.tools.Text;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
@@ -16,16 +18,8 @@ import java.util.*;
 public class ToolboxView extends JPanel {
 
     ArrayList<Object> canvas = new ArrayList<Object>();
-    int lineX1 = 10;
-    int lineY1 = 60;
-    int lineX2 = 40;
-    int lineY2 = 90;
-    int circX = 10;
-    int circY = 50;
-    int rectX = 10;
-    int rectY = 50;
-    int textX = 10;
-    int textY = 50;
+    int lineX1 = 10, lineY1 = 50, lineX2 = 40, lineY2 = 90;
+    int circX = 10, circY = 50, rectX = 10, rectY = 50, textX = 10, textY = 50;
 
     /**
      * Constructor to set up the layout of the toolbox
@@ -109,7 +103,8 @@ public class ToolboxView extends JPanel {
         {
             public void actionPerformed(ActionEvent e)
             {
-                canvas.add(new String("Hello there"));
+                //canvas.add(new String("Hello there"));
+                canvas.add(new Text(textX, textY, "Hello there"));
                 textX += 30;
                 textY += 30;
                 repaint();
@@ -122,9 +117,12 @@ public class ToolboxView extends JPanel {
         Graphics2D g2 = (Graphics2D)g;
 
         for(int i = 0; i < canvas.size(); i++) {
-            if(canvas.get(i) instanceof java.lang.String) {
+            if(canvas.get(i) instanceof util.tools.Text) {
                 g2.setFont(new Font("TimesRoman", Font.PLAIN, 18));
-                g2.drawString((String)canvas.get(i), textX, textY);
+                //g2.drawString((String)canvas.get(i), textX, textY);
+                g2.drawString(((Text)canvas.get(i)).getBlock(),
+                  (int)((Text)canvas.get(i)).getLocation().getX(),
+                  (int)((Text)canvas.get(i)).getLocation().getY());
             }
             else {
                 g2.draw((Shape)canvas.get(i));
