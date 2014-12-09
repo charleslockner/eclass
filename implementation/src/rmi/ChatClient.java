@@ -48,6 +48,9 @@ public class ChatClient {
                 client.sendTCP(registerName);
             }
 
+            // if the received item
+                // : message
+                // : new_User_SignIn
             public void received (Connection connection, Object object) {
                 if (object instanceof UpdateNames) {
                     UpdateNames updateNames = (UpdateNames)object;
@@ -115,7 +118,14 @@ public class ChatClient {
         }.start();
     }
 
-
+    /**
+     *
+     * Main point in the client program the starts up the client.
+     * This also creates the main GUI for the user to manipulate
+     * the electric classroom.
+     *
+     * @param args n\a
+     */
     public static void main (String[] args) {
         Log.set(Log.LEVEL_DEBUG);
         new ChatClient();
