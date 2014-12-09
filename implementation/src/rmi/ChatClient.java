@@ -75,7 +75,7 @@ public class ChatClient {
         final String host = "localhost";
         // Request the user's name.
         String input = (String)JOptionPane.showInputDialog(null, "Name:", "Connect to chat server", JOptionPane.QUESTION_MESSAGE, null,
-                null, "Your Nameupda");
+                null, "Your Name");
         if (input == null || input.trim().length() == 0) System.exit(1);
         name = input.trim();
 
