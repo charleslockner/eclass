@@ -27,6 +27,7 @@ public class Network {
         public String[] names;
     }
 
+
     static public class ChatMessage {
         public String text;
     }

@@ -31,6 +31,13 @@ public class Server {
      *
      * @throws IOException  if can't connect to the port
      */
+
+       /*@
+      ensures
+         // it also ensures that length and
+         messages.length() != 0 && messages != null
+         && connection.name.length() !=0 && connection.name != null
+         @*/
     public Server() throws IOException {
         server = new com.esotericsoftware.kryonet.Server() {
             protected Connection newConnection () {
@@ -53,6 +60,7 @@ public class Server {
                 // We know all connections for this server are actually ChatConnections.
                 ChatConnection connection = (ChatConnection)c;
 
+                // if the user is just logging in then fire this
                 if (object instanceof Network.RegisterName) {
                     // Ignore the object if a client has already registered a name. This is
                     // impossible with our client, but a hacker could send messages at any time.
@@ -73,6 +81,7 @@ public class Server {
                     return;
                 }
 
+                // if the user is writing a message then fire this
                 if (object instanceof Network.ChatMessage) {
                     // Ignore the object if a client tries to chat before registering a name.
                     if (connection.name == null) return;

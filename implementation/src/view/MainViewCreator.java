@@ -3,7 +3,6 @@ package view;
 import rmi.ChatClient;
 import util.chat.Chatbox;
 import util.presentation.PresentationModel;
-import view.chat.ChatboxView;
 import view.layers.LayerView;
 import view.prep.LecturePrepView;
 import view.presentation.*;
@@ -33,11 +32,12 @@ public class MainViewCreator extends JPanel {
         /* creates our presentation view */
     PresentationView presentationView = new PresentationView(presentationModel);
         /* creates our chat box view */
-    ChatboxView chatboxView;
         /* creates our chat box view */
     LecturePrepView lecturePrepView = new LecturePrepView(presentationModel);
 
-
+    /**
+     * The initilization for the main screen.
+     */
     public void setup() {
 
         /* Left Pane => roster view + layer view + toolbox view  */
@@ -90,7 +90,5 @@ public class MainViewCreator extends JPanel {
         //Display the window.
         frame.pack();
         frame.setVisible(true);
-
-
     }
 }
