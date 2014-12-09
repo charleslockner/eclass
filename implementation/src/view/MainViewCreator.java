@@ -1,5 +1,7 @@
 package view;
 
+import rmi.ChatClient;
+import util.chat.Chatbox;
 import util.presentation.PresentationModel;
 import view.chat.ChatboxView;
 import view.layers.LayerView;
@@ -31,24 +33,12 @@ public class MainViewCreator extends JPanel {
         /* creates our presentation view */
     PresentationView presentationView = new PresentationView(presentationModel);
         /* creates our chat box view */
-    ChatboxView chatboxView = new ChatboxView();
+    ChatboxView chatboxView;
         /* creates our chat box view */
     LecturePrepView lecturePrepView = new LecturePrepView(presentationModel);
 
-    /**
-     * @return the chatbox view
-     */
-    public ChatboxView getChatboxView() {
-        return this.chatboxView;
-    }
 
-    /**
-     * This is the creator for all the gui jpanel elements
-     */
-    public MainViewCreator() {
-        setLayout(new BorderLayout());
-
-
+    public void setup() {
 
         /* Left Pane => roster view + layer view + toolbox view  */
         JPanel leftPane = new JPanel(new BorderLayout());
@@ -63,13 +53,21 @@ public class MainViewCreator extends JPanel {
 
         /* right pane = chatbox + lecture prep view */
         JPanel rightPane = new JPanel(new BorderLayout());
-        rightPane.add(chatboxView, BorderLayout.PAGE_START);
+        //rightPane.add(chatboxView, BorderLayout.PAGE_START);
         rightPane.add(lecturePrepView, BorderLayout.PAGE_END);
 
 
         add(leftPane, BorderLayout.LINE_START);
         add(presentationView, BorderLayout.CENTER);
         add(rightPane, BorderLayout.LINE_END);
+    }
+
+    /**
+     * This is the creator for all the gui jpanel elements
+     */
+    public MainViewCreator() {
+        setLayout(new BorderLayout());
+        setup();
     }
 
 
@@ -92,6 +90,7 @@ public class MainViewCreator extends JPanel {
         //Display the window.
         frame.pack();
         frame.setVisible(true);
+
 
     }
 }
