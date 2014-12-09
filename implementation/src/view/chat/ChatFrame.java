@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 /**
  *
@@ -51,6 +52,7 @@ public class ChatFrame extends JFrame {
                 panel.add(topPanel);
                 {
                     topPanel.add(new JScrollPane(messageList = new JList()));
+                    messageList.setCellRenderer(new MyListCellThing());
                     messageList.setModel(new DefaultListModel());
                 }
                 {
@@ -133,4 +135,37 @@ public class ChatFrame extends JFrame {
             }
         });
     }
+
+    public class MyListCellThing extends JLabel implements ListCellRenderer {
+
+        ArrayList<Integer> listInt = new ArrayList<Integer>();
+
+
+        public MyListCellThing() {
+            setOpaque(true);
+        }
+
+        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            // Assumes the stuff in the list has a pretty toString
+
+            String incomingMessage = value.toString();
+
+            if ( incomingMessage.contains("`QinstQ`")) {
+                listInt.add(index);
+                String actualMSg = incomingMessage.split("`QinstQ`")[1];
+                setText(actualMSg);
+            } else {
+                setText(incomingMessage);
+            }
+
+            if (listInt.size() > 0 && listInt.contains(index)) {
+                setBackground(Color.ORANGE);
+            } else {
+                setBackground(Color.WHITE);
+            }
+
+            return this;
+        }
+    }
+
 }

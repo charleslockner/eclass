@@ -22,7 +22,10 @@ import com.esotericsoftware.minlog.Log;
  *
  */
 public class Server {
-    com.esotericsoftware.kryonet.Server server;
+    private com.esotericsoftware.kryonet.Server server;
+    private static int admin = 0;
+    private String adminName = "";
+    private int adminID = 0;
 
     /**
      * This creates a server and newConnection returns a ChatConnection.
@@ -72,6 +75,14 @@ public class Server {
                     if (name.length() == 0) return;
                     // Store the name on the connection.
                     connection.name = name;
+
+                    // the first person to sign in - will be the designated instructor
+                    if( admin == 0) {
+                        adminName = name;
+                        adminID = connection.getID();
+                        admin = 10;
+                    }
+
                     // Send a "connected" message to everyone except the new client.
                     Network.ChatMessage chatMessage = new Network.ChatMessage();
                     chatMessage.text = name + " connected.";
@@ -84,13 +95,31 @@ public class Server {
                 // if the user is writing a message then fire this
                 if (object instanceof Network.ChatMessage) {
                     // Ignore the object if a client tries to chat before registering a name.
-                    if (connection.name == null) return;
+                    if (connection.name == null) {
+                        return;
+                    }
                     Network.ChatMessage chatMessage = (Network.ChatMessage)object;
                     // Ignore the object if the chat message is invalid.
                     String message = chatMessage.text;
-                    if (message == null) return;
+                    if (message == null) {
+                        return;
+                    }
                     message = message.trim();
-                    if (message.length() == 0) return;
+                    if (message.length() == 0) {
+                        return;
+                    }
+
+                    // if any client writes @ + the instructors name ( the first client)
+                    // then highlight it for the instructor
+                    if( message.contains("@"+ adminName + " ")) {
+                        Network.ChatMessage chatMessageAdmin = new Network.ChatMessage();
+                        chatMessageAdmin.text = "`QinstQ`" + "A student has asked you a question.";
+                        server.sendToTCP(adminID, chatMessageAdmin);
+                    }
+
+
+
+
                     // Prepend the connection's name and send to everyone.
                     chatMessage.text = connection.name + ": " + message;
                     server.sendToAllTCP(chatMessage);
@@ -112,6 +141,19 @@ public class Server {
         });
         server.bind(Network.port);
         server.start();
+
+        // Open a window to provide an easy way to stop the server.
+        JFrame frame = new JFrame("Chat Server");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosed (WindowEvent evt) {
+                server.stop();
+            }
+        });
+        frame.getContentPane().add(new JLabel("Close to stop the chat server."));
+        frame.setSize(320, 200);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     /**
@@ -144,6 +186,7 @@ public class Server {
 
     public static void main (String[] args) throws IOException {
         Log.set(Log.LEVEL_DEBUG);
+        System.out.println("HMM");
         new Server();
     }
 }
