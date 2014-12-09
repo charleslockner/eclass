@@ -72,15 +72,10 @@ public class ChatClient {
             }
         });
 
-        // Request the host from the user.
-        String input = (String)JOptionPane.showInputDialog(null, "Host:", "Connect to chat server", JOptionPane.QUESTION_MESSAGE,
-                null, null, "localhost");
-        if (input == null || input.trim().length() == 0) System.exit(1);
-        final String host = input.trim();
-
+        final String host = "localhost";
         // Request the user's name.
-        input = (String)JOptionPane.showInputDialog(null, "Name:", "Connect to chat server", JOptionPane.QUESTION_MESSAGE, null,
-                null, "Test");
+        String input = (String)JOptionPane.showInputDialog(null, "Name:", "Connect to chat server", JOptionPane.QUESTION_MESSAGE, null,
+                null, "Your Nameupda");
         if (input == null || input.trim().length() == 0) System.exit(1);
         name = input.trim();
 
