@@ -1,6 +1,8 @@
 package util.tools;
 
 import java.util.ArrayList;
+import java.awt.geom.*;
+import util.tools.Text;
 
 
 /****
@@ -17,6 +19,11 @@ public class Canvas {
      *
      * @param object The object to be added to the canvas array
      */
+    /*@
+      requires
+         this.block instanceof Text || this.block instanceof Line2D
+           || this.block instanceof Ellipse2D || this.block instanceof Rectangle
+   @*/
     public void add(Object object)
     {
         array.add(object);
@@ -38,6 +45,10 @@ public class Canvas {
      * @param index The element position in the array
      * @return The object at the specified position in the array
      */
+    /*@
+      requires
+         index >= 0 && index < array.size()
+   @*/
     public Object get(int index)
     {
         return array.get(index);
