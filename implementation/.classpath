@@ -5,5 +5,12 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="lib/junit-4.11.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.json.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/asm-4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsonbeans-0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/kryo-2.20.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/kryonet-2.18.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/minlog-none-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/objenesis-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/reflectasm-1.07.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
