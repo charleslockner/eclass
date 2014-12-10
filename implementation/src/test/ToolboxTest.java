@@ -2,6 +2,7 @@ package test;
 
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.*;
 import util.tools.Text;
 import util.tools.Canvas;
 
