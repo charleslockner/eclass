@@ -34,10 +34,10 @@ public class Text {
     * @return position The position of the text block
     */
    /*@
-      requires
+      ensures
          this.position.getX() >= 0 && this.position.getY() >= 0
    @*/
-   public Point getLocation() {
+   public Point getPosition() {
       return this.position;
    }
 
@@ -46,7 +46,7 @@ public class Text {
     * @return block The written content of the text block
     */
    /*@
-      requires
+      ensures
          this.block instanceof String
    @*/
    public String getBlock() {
@@ -58,7 +58,7 @@ public class Text {
     * @param position The position of the text block
     */
    /*@
-      ensures
+      requires
          this.position.getX() > 0 && this.position.getY() > 0
    @*/
    public void setPosition(Point position){
@@ -71,7 +71,7 @@ public class Text {
     * @param block The written text string
     */
    /*@
-      ensures
+      requires
          this.block instanceof String
    @*/
    public void setBlock(String block) {
