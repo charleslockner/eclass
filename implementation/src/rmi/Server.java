@@ -154,6 +154,18 @@ public class Server {
         frame.setVisible(true);
     }
 
+
+     /*@
+     requries
+        // require that this method must be called with at least one person
+        connections.length != 0 && names.size() != 0
+     ensures
+        // ensure that each connection is valid and that ID never is 0
+
+        (forall Connection connections ;
+            connections != null && connection.getID() != 0
+        )
+    @*/
     /**
      * Whenever a new client is called, this is called on every single client
      * to update who has inserted the classroom.
@@ -175,6 +187,15 @@ public class Server {
         server.sendToAllTCP(updateNames);
     }
 
+
+     /*@
+     requries
+        // require that the name must not null or blank
+        name != null && !name.equals("")
+     ensures
+        // ensure that ChatConnection is a connection
+        this.getClass() == Connection.class
+    @*/
     /**
      * This holds all the connection information and the name of the client
      */
@@ -183,8 +204,6 @@ public class Server {
     }
 
     public static void main (String[] args) throws IOException {
-        Log.set(Log.LEVEL_DEBUG);
-        System.out.println("HMM");
         new Server();
     }
 }

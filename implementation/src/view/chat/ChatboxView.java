@@ -1,6 +1,7 @@
 package view.chat;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  * @author nathan kaabdull
  *
  */
-public class ChatFrame extends JFrame {
+public class ChatboxView extends JFrame {
     CardLayout cardLayout;
     JProgressBar progressBar;
     JList messageList;
@@ -26,7 +27,7 @@ public class ChatFrame extends JFrame {
     JButton sendButton;
     JList nameList;
 
-    public ChatFrame (String host) {
+    public ChatboxView(String host) {
         super("Chat Client");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(640, 200);

@@ -93,9 +93,15 @@ public class Viewer implements Serializable {
     }
 
 
+    /*@
+    requries
+        id != null && id > 0 && string != null && !string.equals("")
+        && value != 0 && value != null
+    ensures
+    // it also ensures that the databse was updated
+            old(database).size()+1 == database.size()
 
-
-
+  @*/
     public void updateViewer(int id, DB database, String string, int value) {
        BasicDBObject updateDoc = new BasicDBObject();
        updateDoc.append("$set", new BasicDBObject().append(string, value));
@@ -166,8 +172,6 @@ public class Viewer implements Serializable {
         } catch (JSONException e) {
             System.err.println("JSON EXECEPTION " + e);
         }
-
-        System.out.println("STUDENT ROLE IS : " + getRole());
 
         return this;
     }

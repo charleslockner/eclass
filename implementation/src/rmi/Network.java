@@ -29,8 +29,15 @@ public class Network {
         kryo.register(String[].class);
         kryo.register(UpdateNames.class);
         kryo.register(ChatMessage.class);
+        kryo.register(RosterUpdate.class);
     }
 
+
+    /*@
+     requries
+        // require that the name must not null or blank
+        name != null && !name.equals("")
+    @*/
     /**
      * The class manages when clients are just signing onto the server.
      */
@@ -38,6 +45,12 @@ public class Network {
         public String name;
     }
 
+
+    /*@
+     requries
+        // require that the string of names must not be null and greater than 0
+        names.length > 0 && names != null
+    @*/
     /**
      *  The class that manages when clients are sign off and must update
      *  the name list column.
@@ -46,6 +59,15 @@ public class Network {
         public String[] names;
     }
 
+
+    /*@
+     requries
+        // require that the text must not be null and not blank
+        text != null && !text.equals("")
+     ensure
+        // ensure that if text is @instructor that the question is highlighted
+        text.equals("@"+instructurName) <==> server.sendToTCP(adminID, chatMessageAdmin);
+    @*/
     /**
      *  The class tha manages chat messages being sent across from
      *  client to server to other clients.
@@ -53,4 +75,12 @@ public class Network {
     static public class ChatMessage {
         public String text;
     }
+
+    /**
+     *  The class tha manages when a user signs in to update the roster.
+     */
+    static public class RosterUpdate {
+        public String name;
+    }
+
 }

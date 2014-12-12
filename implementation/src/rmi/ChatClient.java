@@ -11,10 +11,12 @@ import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import rmi.Network.ChatMessage;
 import rmi.Network.RegisterName;
+import rmi.Network.RosterUpdate;
 import rmi.Network.UpdateNames;
 import com.esotericsoftware.minlog.Log;
 import view.MainViewCreator;
-import view.chat.ChatFrame;
+import view.chat.ChatboxView;
+
 
 /**
  *
@@ -29,7 +31,7 @@ import view.chat.ChatFrame;
  *
  */
 public class ChatClient {
-    ChatFrame chatFrame;
+    ChatboxView chatboxView;
     Client client;
     String name;
 
@@ -48,19 +50,25 @@ public class ChatClient {
                 client.sendTCP(registerName);
             }
 
-            // if the received item
+            // this is the data the is being sent FROM THE SERVER to THE CLIENT
                 // : message
                 // : new_User_SignIn
             public void received (Connection connection, Object object) {
                 if (object instanceof UpdateNames) {
                     UpdateNames updateNames = (UpdateNames)object;
-                    chatFrame.setNames(updateNames.names);
+                    chatboxView.setNames(updateNames.names);
                     return;
                 }
 
                 if (object instanceof ChatMessage) {
                     ChatMessage chatMessage = (ChatMessage)object;
-                    chatFrame.addMessage(chatMessage.text);
+                    chatboxView.addMessage(chatMessage.text);
+                    return;
+                }
+
+                if (object instanceof RosterUpdate) {
+                    //ChatMessage chatMessage = (ChatMessage)object;
+                    //chatboxView.addMessage(chatMessage.text);
                     return;
                 }
             }
@@ -69,7 +77,7 @@ public class ChatClient {
                 EventQueue.invokeLater(new Runnable() {
                     public void run () {
                         // Closing the frame calls the close listener which will stop the client's update thread.
-                        chatFrame.dispose();
+                        chatboxView.dispose();
                     }
                 });
             }
@@ -83,25 +91,25 @@ public class ChatClient {
         name = input.trim();
 
         // All the ugly Swing stuff is hidden in ChatFrame so it doesn't clutter the KryoNet example code.
-        chatFrame = new ChatFrame(host);
+        chatboxView = new ChatboxView(host);
         // This listener is called when the send button is clicked.
-        chatFrame.setSendListener(new Runnable() {
+        chatboxView.setSendListener(new Runnable() {
             public void run () {
                 ChatMessage chatMessage = new ChatMessage();
-                chatMessage.text = chatFrame.getSendText();
+                chatMessage.text = chatboxView.getSendText();
                 client.sendTCP(chatMessage);
             }
         });
         // This listener is called when the chat window is closed.
-        chatFrame.setCloseListener(new Runnable() {
+        chatboxView.setCloseListener(new Runnable() {
             public void run () {
                 client.stop();
             }
         });
 
 
-        chatFrame.setLocation(1000,100);
-        chatFrame.setVisible(true);
+        chatboxView.setLocation(1000,100);
+        chatboxView.setVisible(true);
 
         // We'll do the connect on a new thread so the ChatFrame can show a progress bar.
         // Connecting to localhost is usually so fast you won't see the progress bar.
@@ -127,7 +135,6 @@ public class ChatClient {
      * @param args n\a
      */
     public static void main (String[] args) {
-        Log.set(Log.LEVEL_DEBUG);
         new ChatClient();
         new MainViewCreator().createAndShowGUI();
     }
