@@ -1,20 +1,23 @@
 package view.layers;
 
 import javax.swing.*;
+
 import java.awt.*;
+
 import javax.swing.JButton;
+
 import java.awt.event.*;
+
+import util.layers.*;
 
 
 /**
  *
  * Class the implements a layer viewer.
  *
- * @author oliver
+ * @author Oliver Xia (wxia@calpoly.edu)
  */
-public class LayerView extends JPanel
-        implements ActionListener,
-        MouseMotionListener {
+public class LayerView extends JPanel implements ActionListener, MouseMotionListener {
     private String[] layerStrings = { "Yellow (0)", "Magenta (1)",
             "Cyan (2)",   "Red (3)",
             "Green (4)" };
@@ -22,12 +25,12 @@ public class LayerView extends JPanel
             Color.cyan,   Color.red,
             Color.green };
 
-    private JLayeredPane layeredPane;
     private JLabel dukeLabel;
     private JCheckBox onTop;
     private JComboBox layerList;
     private JButton addButton;
     private JButton removeButton;
+    private LayerPanel layerFunct;
 
     //Action commands
     private static String ON_TOP_COMMAND = "ontop";
@@ -46,14 +49,14 @@ public class LayerView extends JPanel
 
     public LayerView()    {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-
+        this.layerFunct = new LayerPanel();
 
         //Create and set up the layered pane.
-        layeredPane = new JLayeredPane();
-        layeredPane.setPreferredSize(new Dimension(500, 500));
-        layeredPane.setBorder(BorderFactory.createTitledBorder(
+        layerFunct.layeredPane = new JLayeredPane();
+        layerFunct.layeredPane.setPreferredSize(new Dimension(500, 500));
+        layerFunct.layeredPane.setBorder(BorderFactory.createTitledBorder(
                 "Move the Mouse to Move Square"));
-        layeredPane.addMouseMotionListener(this);
+        layerFunct.layeredPane.addMouseMotionListener(this);
 
 
 
@@ -63,13 +66,13 @@ public class LayerView extends JPanel
         dukeLabel.setOpaque(true);
         dukeLabel.setBackground(Color.BLACK);
 
-        layeredPane.add(dukeLabel, new Integer(2), 0);
+        layerFunct.layeredPane.add(dukeLabel, new Integer(2), 0);
 
         //Add control pane and layered pane to this JPanel.
         add(Box.createRigidArea(new Dimension(0, 10)));
         add(createControlPanel());
         add(Box.createRigidArea(new Dimension(0, 10)));
-        add(layeredPane);
+        add(layerFunct.layeredPane);
     }
 
     /** Returns an ImageIcon, or null if the path was invalid. */
@@ -98,25 +101,14 @@ public class LayerView extends JPanel
         return label;
     }
 
-    public void addLayer() {
-        JLabel label = createColoredLabel(layerStrings[i], layerColors[i], origin);
-        layeredPane.add(label, new Integer(i));
-        origin.x += offset;
-        origin.y += offset;
-        i++;
-    }
-
-    public void removeLayer() {
-        layeredPane.remove(--i);
-    }
-
     //Create the control pane for the top of the frame.
     private JPanel createControlPanel() {
         addButton = new JButton();
         addButton.setText("Add Layer");
         addButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                addLayer();
+            	JLabel label = createColoredLabel(layerStrings[i], layerColors[i], origin);
+                layerFunct.addLayer(label, origin, offset, i, layerColors, layerStrings);
             }
         });
 
@@ -124,7 +116,7 @@ public class LayerView extends JPanel
         removeButton.setText("Remove Layer");
         removeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                removeLayer();
+                layerFunct.removeLayer(i);
             }
         });
 
@@ -160,13 +152,13 @@ public class LayerView extends JPanel
 
         if (ON_TOP_COMMAND.equals(cmd)) {
             if (onTop.isSelected())
-                layeredPane.moveToFront(dukeLabel);
+            	layerFunct.layeredPane.moveToFront(dukeLabel);
             else
-                layeredPane.moveToBack(dukeLabel);
+            	layerFunct.layeredPane.moveToBack(dukeLabel);
 
         } else if (LAYER_COMMAND.equals(cmd)) {
             int position = onTop.isSelected() ? 0 : 1;
-            layeredPane.setLayer(dukeLabel,
+            layerFunct.layeredPane.setLayer(dukeLabel,
                     layerList.getSelectedIndex(),
                     position);
         }
