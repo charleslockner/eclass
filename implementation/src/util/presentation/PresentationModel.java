@@ -17,7 +17,11 @@ public class PresentationModel extends Observable {
 	 * Constructor for the presentation model class. This is responsible for setting up
 	 * all of the slide urls
 	 * pre: The urls must be valid strings
-     * post: The slideUrls will contain at least 1 url, several more should be added
+     * post: The slideUrls will contain the following 3 urls:
+     * "http://users.csc.calpoly.edu/~kaabdull/projects/work/electric-classroom/requirements/index.html"
+	 * "http://users.csc.calpoly.edu/~kaabdull/projects/work/electric-classroom/requirements/section2/overview/index.html"
+	 * "http://users.csc.calpoly.edu/~kaabdull/projects/work/electric-classroom/requirements/section2/overview/indexFile.html"
+	 * and urlNdx will be set to 0
 	 */
 	public PresentationModel() {
 		slideUrls = new ArrayList<String>();
@@ -65,7 +69,7 @@ public class PresentationModel extends Observable {
 		setChanged();
 		notifyObservers();
 		clearChanged();
-	}	
+	}
 	
 	/**
 	 * Increments the urlNdx and notifies observers that the slide has changed
@@ -79,5 +83,19 @@ public class PresentationModel extends Observable {
 		setChanged();
 		notifyObservers();
 		clearChanged();
+	}
+	
+	/**
+	 * This is the corresponding function to expand.
+	 * */
+	void expand() {
+		
+	}
+	
+	/**
+	 * This is the corresponding function to collapse.
+	 * */
+	void collapse() {
+		
 	}
 }

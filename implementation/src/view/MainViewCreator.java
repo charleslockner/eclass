@@ -32,7 +32,6 @@ public class MainViewCreator extends JPanel {
         /* creates our presentation view */
     PresentationView presentationView = new PresentationView(presentationModel);
         /* creates our chat box view */
-        /* creates our chat box view */
     LecturePrepView lecturePrepView = new LecturePrepView(presentationModel);
 
     /**
