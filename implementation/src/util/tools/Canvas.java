@@ -56,4 +56,13 @@ public class Canvas {
         else
         	return null;
     }
+    
+    /**
+     * Returns the number of objects currently in the canvas.
+     *
+     * @return The number of objects currently in the canvas.
+     */
+    public int size() {
+    	return array.size();
+    }
 }

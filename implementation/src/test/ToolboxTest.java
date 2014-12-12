@@ -1,11 +1,12 @@
 package test;
 
-import org.junit.*;
-import static org.junit.Assert.*;
 import util.tools.Text;
 import util.tools.Canvas;
 import java.awt.Point;
 import java.awt.Rectangle;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /****
  *

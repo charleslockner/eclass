@@ -1,22 +1,22 @@
 package view.tools;
 
 import util.tools.Text;
+import util.tools.Canvas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;
-import java.util.*;
+//import java.util.*;
 
 /****
  *
  * Class ToolboxView provides a single method to set up the gui for the toolbox
- *
  * @author Eric Yun (eryun@calpoly.edu)
  */
 
 public class ToolboxView extends JPanel {
-
-    ArrayList<Object> canvas = new ArrayList<Object>();
+    //ArrayList<Object> canvas = new ArrayList<Object>();
+	Canvas canvas = new Canvas();
     int lineX1 = 10, lineY1 = 50, lineX2 = 40, lineY2 = 90;
     int circX = 10, circY = 50, rectX = 10, rectY = 50, textX = 10, textY = 50;
 
