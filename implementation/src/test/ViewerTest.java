@@ -3,6 +3,7 @@ package test;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import util.roster.Viewer;
@@ -21,6 +22,7 @@ public class ViewerTest {
 
     private Viewer viewer;
     private Viewer viewer2;
+    private DB db;
 
 
     /****
@@ -40,6 +42,9 @@ public class ViewerTest {
      *     Phase 5: Test getCurrentlyInClass
      *                                                                      <p><li>
      *     Phase 6: Test getID
+     *                                                                      <p><li>
+     *     Phase 7: Tear down database & make sure no connection
+     *
      *                                                                        </ul>
      */
 
@@ -52,7 +57,7 @@ public class ViewerTest {
             // establish the connection as an actual client now
             MongoClient mongoClient = new MongoClient(mongoClientURI);
             // find the database
-            DB db = mongoClient.getDB("eclassroom");
+            db = mongoClient.getDB("eclassroom");
 
             // IF ALL TEST PASS
             // WE KNOW UNMARSHAL VIEWER WORKS
@@ -184,12 +189,18 @@ public class ViewerTest {
     @Test
     public void testGetId() throws Exception {
         assertEquals("testGetID method v",this.viewer.getId(), 5);
-        assertEquals("testGetID method v2",this.viewer.getId(), 2);
+        assertEquals("testGetID method v2",this.viewer2.getId(), 2);
     }
 
     @Test
     public void testGetClassCount() throws Exception {
         assertEquals("testGetClassCount method",this.viewer.getClassCount(), 3);
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        db.requestDone();
+        assertTrue(db.getReadPreference().isSlaveOk() == false);
     }
 
 
