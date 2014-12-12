@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 /**
  * Class implementation of a classroom.
  *
- * @author kaabdull
+ * @author dan pierson (dspierso@calpoly.edu)
  */
 public class Classroom implements Serializable {
 
@@ -18,11 +18,18 @@ public class Classroom implements Serializable {
     private String name;
     private int currentlyInClass = 0;
 
-
+    /*@
+     * ensures
+     *    name.length() >= 0
+     */
     public Classroom(String name) {
         this.name = name;
     }
 
+    /*@
+     * ensures
+     *    name.length() >= 0
+     */
     public String getNameOfClass() {
         return name;
     }
@@ -33,6 +40,11 @@ public class Classroom implements Serializable {
      *
      * @return the number of current viewers in the class
      */
+    
+    /*@
+    * requires
+    * currentlyInClass > 0
+  @*/
     public int getNumberofViewersCurrentlyInClass() {
         return currentlyInClass;
     }
@@ -43,6 +55,10 @@ public class Classroom implements Serializable {
      *
      * @param viewer the viewer being added
      */
+    /*@
+     * ensures
+     *    rosterQueue.length() > 0
+     */
     public void addViewerToCurrentSession(Viewer viewer) {
         rosterQueue.add(viewer);
     }
@@ -52,6 +68,10 @@ public class Classroom implements Serializable {
      * Removes a viewer from the current session of the classroom.
      *
      * @param viewer the viewer being removed
+     */
+    /*@
+     * ensures
+     *    rosterQueue.length() > 0
      */
     public void removeViewerFromCurrentSession(Viewer viewer) {
         rosterQueue.remove(viewer);
