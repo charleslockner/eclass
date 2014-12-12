@@ -87,11 +87,11 @@ public class ToolboxTest {
     	             text.getPosition().getY() >= 0);
     	
     	text = new Text(-12, 13, "Test3");
-    	assertTrue(text.getPosition().getX() >= 0 &&
+    	assertFalse(text.getPosition().getX() >= 0 &&
     	             text.getPosition().getY() >= 0);
     	
     	text = new Text(23, -4, "Test4");
-    	assertTrue(text.getPosition().getX() >= 0 &&
+    	assertFalse(text.getPosition().getX() >= 0 &&
     	             text.getPosition().getY() >= 0);
     }
 
@@ -126,11 +126,11 @@ public class ToolboxTest {
     			     text.getPosition().getY() >= 0);
     	
     	text.setPosition(new Point(-10, 5));
-    	assertTrue(text.getPosition().getX() >= 0 &&
+    	assertFalse(text.getPosition().getX() >= 0 &&
     			     text.getPosition().getY() >= 0);
     	
     	text.setPosition(new Point(10, -5));
-    	assertTrue(text.getPosition().getX() >= 0 &&
+    	assertFalse(text.getPosition().getX() >= 0 &&
     			     text.getPosition().getY() >= 0);
     }
     
@@ -191,7 +191,7 @@ public class ToolboxTest {
     @Test
     public void testCanvasGet() {
     	canvas = new Canvas();
-    	assertTrue(canvas.get(0) != null);
+    	assertFalse(canvas.get(0) != null);
     	
     	canvas.add(new Rectangle(10, 10, 10, 10));
     	assertTrue(canvas.get(0) != null);
@@ -201,9 +201,9 @@ public class ToolboxTest {
     	assertTrue(canvas.get(1) != null);
     	
     	canvas.add(new Rectangle(10, 10, 10, 10));
-    	assertTrue(canvas.get(4) != null);
+    	assertFalse(canvas.get(4) != null);
     	
-    	assertTrue(canvas.get(6) != null);
+    	assertFalse(canvas.get(6) != null);
     }
 
     /**
@@ -224,7 +224,7 @@ public class ToolboxTest {
     @Test
     public void testCanvasDelete() {
     	canvas = new Canvas();
-    	assertTrue(canvas.delete() != null);
+    	assertFalse(canvas.delete() != null);
     	
     	canvas.add(new Rectangle(10, 10, 10, 10));
     	canvas.add(new Rectangle(10, 10, 10, 10));
@@ -232,7 +232,7 @@ public class ToolboxTest {
     	
     	assertTrue(canvas.delete() != null);
     	
-    	assertTrue(canvas.delete() != null);
+    	assertFalse(canvas.delete() != null);
     }
     
     /**
