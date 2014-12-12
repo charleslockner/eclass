@@ -112,8 +112,8 @@ public class ToolboxView extends JPanel {
             if(canvas.get(i) instanceof util.tools.Text) {
                 g2.setFont(new Font("TimesRoman", Font.PLAIN, 18));
                 g2.drawString(((Text)canvas.get(i)).getBlock(),
-                  (int)((Text)canvas.get(i)).getLocation().getX(),
-                  (int)((Text)canvas.get(i)).getLocation().getY());
+                  (int)((Text)canvas.get(i)).getPosition().getX(),
+                  (int)((Text)canvas.get(i)).getPosition().getY());
             }
             else {
                 g2.draw((Shape)canvas.get(i));

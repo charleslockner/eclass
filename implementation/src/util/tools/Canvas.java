@@ -1,9 +1,6 @@
 package util.tools;
 
 import java.util.ArrayList;
-import java.awt.geom.*;
-import util.tools.Text;
-
 
 /****
  * Canvas class which contains an ArrayList called array to hold the various objects
@@ -19,24 +16,10 @@ public class Canvas {
      *
      * @param object The object to be added to the canvas array
      */
-    /*@
-      requires
-         this.block instanceof Text || this.block instanceof Line2D
-           || this.block instanceof Ellipse2D || this.block instanceof Rectangle
-   @*/
     public void add(Object object)
     {
-        array.add(object);
-    }
-
-    /**
-     * Removes the last element in the canvas, and returns its content.
-     *
-     * @return The object being removed from the array
-     */
-    public Object delete()
-    {
-        return array.remove(array.size() - 1);
+        if (object != null)
+    		array.add(object);
     }
 
     /**
@@ -48,9 +31,29 @@ public class Canvas {
     /*@
       requires
          index >= 0 && index < array.size()
-   @*/
+    @*/
     public Object get(int index)
     {
-        return array.get(index);
+        if (array.size() > 0 && index < array.size())
+    		return array.get(index);
+        else
+        	return null;
+    }
+    
+    /**
+     * Removes the last element in the canvas, and returns its content.
+     *
+     * @return The object being removed from the array
+     */
+    /*@
+       requires
+          array.size() > 0
+    @*/
+    public Object delete()
+    {
+        if (array.size() > 0)
+    		return array.remove(array.size() - 1);
+        else
+        	return null;
     }
 }
